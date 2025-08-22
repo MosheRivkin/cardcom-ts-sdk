@@ -10,11 +10,11 @@
     "zod",
     "axios"
   ],
-  "author": "Your Name",
+  "author": "Moshe Rivkin",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/cardcom-ts-sdk.git"
+    "url": "https://github.com/mosherivkin/cardcom-ts-sdk.git"
   },
   "module": "index.ts",
   "type": "module",

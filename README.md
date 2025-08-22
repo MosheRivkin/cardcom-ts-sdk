@@ -14,7 +14,7 @@ Unofficial TypeScript wrapper for the Cardcom REST API, providing type safety, d
 ```bash
 npm install cardcom-ts-sdk
 # or
-bun install cardcom-ts-sdk
+bun add cardcom-ts-sdk
 ```
 
 ## 💻 Usage 
