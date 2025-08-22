@@ -1,0 +1,1 @@
+{"type":"string","description":"","x-enumNames":["Information","Debit","Discharge","ForcedCharge","CashBack","CashTransaction","Recurring","BalanceQuery","Cancel","Refund","Recharge"],"enum":["Information","Debit","Discharge","ForcedCharge","CashBack","CashTransaction","Recurring","BalanceQuery","Cancel","Refund","Recharge"],"x-readme-ref-name":"DealType"}

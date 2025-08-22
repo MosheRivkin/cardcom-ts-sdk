@@ -1,0 +1,1 @@
+{"type":"string","description":"","x-enumNames":["Unknown","Isracard","CAL","Diners","AmericanExpress","Laumicard","CardCom","PayPal","Upay","PayMe"],"enum":["Unknown","Isracard","CAL","Diners","AmericanExpress","Laumicard","CardCom","PayPal","Upay","PayMe"],"x-readme-ref-name":"Acquire"}

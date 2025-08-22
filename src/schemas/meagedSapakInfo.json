@@ -1,0 +1,1 @@
+{"type":"object","additionalProperties":false,"properties":{"SapakNumber":{"type":"integer","format":"int32"},"SapakStatus":{"type":"string","description":"","x-enumNames":["UnderTest","InProcess","Approved","Blocked","Error"],"enum":["UnderTest","InProcess","Approved","Blocked","Error"],"x-readme-ref-name":"SapakStatus"}},"x-readme-ref-name":"MeagedSapakInfo"}

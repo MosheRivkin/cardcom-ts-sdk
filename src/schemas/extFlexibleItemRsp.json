@@ -1,0 +1,1 @@
+{"type":"object","additionalProperties":false,"properties":{"DocumentLineDesc":{"type":"string","nullable":true},"Price":{"type":"number","format":"decimal"},"IsPriceIncludeVat":{"type":"boolean"},"ProductId":{"type":"string","nullable":true}},"x-readme-ref-name":"ExtFlexibleItemRsp"}

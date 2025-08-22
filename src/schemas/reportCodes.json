@@ -1,0 +1,1 @@
+{"type":"integer","description":"","x-enumNames":["NewCardNumber_1","CardCanceled_2","ChargeBack_3","DealCanceledByCardOwner_4","ReactivateCard_5"],"enum":[1,2,3,4,5],"x-readme-ref-name":"ReportCodes"}

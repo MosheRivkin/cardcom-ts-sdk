@@ -1,0 +1,1 @@
+{"type":"integer","description":"","x-enumNames":["Unknown","male","female"],"enum":[0,1,2],"x-readme-ref-name":"Gender2"}

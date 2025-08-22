@@ -1,0 +1,1 @@
+{"type":"object","additionalProperties":false,"properties":{"Id":{"type":"integer","format":"int64"},"CodeStreet":{"type":"integer","format":"int32","nullable":true},"Street":{"type":"string","nullable":true},"CityCode":{"type":"integer","format":"int32","nullable":true},"StreetEng":{"type":"string","nullable":true}},"x-readme-ref-name":"DataGov_StreetCodes"}

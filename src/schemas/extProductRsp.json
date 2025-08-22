@@ -1,0 +1,1 @@
+{"type":"object","additionalProperties":false,"properties":{"ProductId":{"type":"string","nullable":true},"Quantity":{"type":"number","format":"decimal"}},"x-readme-ref-name":"ExtProductRsp"}

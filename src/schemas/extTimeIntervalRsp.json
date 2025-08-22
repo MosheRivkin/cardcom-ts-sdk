@@ -1,0 +1,1 @@
+{"type":"object","additionalProperties":false,"properties":{"TimeIntervalId":{"type":"integer"},"AddDays":{"type":"integer","format":"int32"},"AddWeeks":{"type":"integer","format":"int32"},"AddMonth":{"type":"integer","format":"int32"},"AddYears":{"type":"integer","format":"int32"}},"x-readme-ref-name":"ExtTimeIntervalRsp"}

@@ -1,0 +1,1 @@
+{"type":"string","description":"","x-enumNames":["Immediate","Late","Continuous"],"enum":["Immediate","Late","Continuous"],"x-readme-ref-name":"ExpectedStoreSupplyDeliverySchedule"}

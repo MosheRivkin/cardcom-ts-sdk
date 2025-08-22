@@ -1,0 +1,1 @@
+{"type":"integer","description":"","x-enumNames":["Regular_1","Advanced_2","Immediate_3","Credit_6","DEBIT_7","Payments_8","IsraCredit_12","LOADING_17","Exchange_71","ExchangePayments_78"],"enum":[1,2,3,6,7,8,12,17,71,78],"x-readme-ref-name":"TXNType"}
