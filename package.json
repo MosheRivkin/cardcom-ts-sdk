@@ -1,6 +1,6 @@
 {
   "name": "cardcom-ts-sdk",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Unofficial TypeScript wrapper for the Cardcom REST API, providing type safety, documentation, schema validation, and convenient fetching.",
   "keywords": [
     "cardcom",
