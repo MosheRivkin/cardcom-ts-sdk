@@ -1,8 +1,8 @@
-import type { Data } from "./Data.ts";
+import type { Data } from './Data.ts'
 
 export type MuhlafimData = {
-    /**
-     * @type array
-    */
-    Data?: Data[] | null;
-};
+  /**
+   * @type array
+   */
+  Data?: Data[] | null
+}

@@ -1,13 +1,18 @@
-import type { CompanyOperationsGetSubMCCsQueryParams, CompanyOperationsGetSubMCCs200, CompanyOperationsGetSubMCCs401, CompanyOperationsGetSubMCCsQueryResponse } from "../../types/CompanyOperationsGetSubMCCs.ts";
-import type { ToZod } from "@kubb/plugin-zod/utils/v4";
-import { mccdBsSchema } from "../mccd-bs-schema.ts";
-import { z } from "zod";
+import type {
+  CompanyOperationsGetSubMCCsQueryParams,
+  CompanyOperationsGetSubMCCs200,
+  CompanyOperationsGetSubMCCs401,
+  CompanyOperationsGetSubMCCsQueryResponse,
+} from '../../types/CompanyOperationsGetSubMCCs.ts'
+import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import { mccdBsSchema } from '../mccd-bs-schema.ts'
+import { z } from 'zod'
 
 export const companyOperationsGetSubMcCsQueryParamsSchema = z.object({
-      "SupplierUserName": z.string().nullable(),
-  "secret": z.string().nullable(),
-  "mccCode": z.coerce.number().int()
-      }) as unknown as ToZod<CompanyOperationsGetSubMCCsQueryParams>
+  SupplierUserName: z.string().nullable(),
+  secret: z.string().nullable(),
+  mccCode: z.coerce.number().int(),
+}) as unknown as ToZod<CompanyOperationsGetSubMCCsQueryParams>
 
 /**
  * @description successful request

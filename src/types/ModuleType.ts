@@ -1,6 +1,6 @@
 export type ModuleType = {
-    /**
-     * @type string
-    */
-    ModuleID?: string | null;
-};
+  /**
+   * @type string
+   */
+  ModuleID?: string | null
+}

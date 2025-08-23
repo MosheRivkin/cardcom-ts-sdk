@@ -1,12 +1,17 @@
-import type { CompanyOperationsGetCountriesQueryParams, CompanyOperationsGetCountries200, CompanyOperationsGetCountries401, CompanyOperationsGetCountriesQueryResponse } from "../../types/CompanyOperationsGetCountries.ts";
-import type { ToZod } from "@kubb/plugin-zod/utils/v4";
-import { countriesIsoSchema } from "../countries-iso-schema.ts";
-import { z } from "zod";
+import type {
+  CompanyOperationsGetCountriesQueryParams,
+  CompanyOperationsGetCountries200,
+  CompanyOperationsGetCountries401,
+  CompanyOperationsGetCountriesQueryResponse,
+} from '../../types/CompanyOperationsGetCountries.ts'
+import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import { countriesIsoSchema } from '../countries-iso-schema.ts'
+import { z } from 'zod'
 
 export const companyOperationsGetCountriesQueryParamsSchema = z.object({
-      "SupplierUserName": z.string().nullable(),
-  "secret": z.string().nullable()
-      }) as unknown as ToZod<CompanyOperationsGetCountriesQueryParams>
+  SupplierUserName: z.string().nullable(),
+  secret: z.string().nullable(),
+}) as unknown as ToZod<CompanyOperationsGetCountriesQueryParams>
 
 /**
  * @description successful request
@@ -18,4 +23,5 @@ export const companyOperationsGetCountries200Schema = z.array(countriesIsoSchema
  */
 export const companyOperationsGetCountries401Schema = z.string() as unknown as ToZod<CompanyOperationsGetCountries401>
 
-export const companyOperationsGetCountriesQueryResponseSchema = companyOperationsGetCountries200Schema as unknown as ToZod<CompanyOperationsGetCountriesQueryResponse>
+export const companyOperationsGetCountriesQueryResponseSchema =
+  companyOperationsGetCountries200Schema as unknown as ToZod<CompanyOperationsGetCountriesQueryResponse>

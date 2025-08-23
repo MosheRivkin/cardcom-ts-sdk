@@ -1,13 +1,18 @@
-import type { CompanyOperationsGetCitiesQueryParams, CompanyOperationsGetCities200, CompanyOperationsGetCities401, CompanyOperationsGetCitiesQueryResponse } from "../../types/CompanyOperationsGetCities.ts";
-import type { ToZod } from "@kubb/plugin-zod/utils/v4";
-import { dataGovCityCodesSchema } from "../data-gov-city-codes-schema.ts";
-import { z } from "zod";
+import type {
+  CompanyOperationsGetCitiesQueryParams,
+  CompanyOperationsGetCities200,
+  CompanyOperationsGetCities401,
+  CompanyOperationsGetCitiesQueryResponse,
+} from '../../types/CompanyOperationsGetCities.ts'
+import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import { dataGovCityCodesSchema } from '../data-gov-city-codes-schema.ts'
+import { z } from 'zod'
 
 export const companyOperationsGetCitiesQueryParamsSchema = z.object({
-      "SupplierUserName": z.string().nullable(),
-  "secret": z.string().nullable(),
-  "startwith": z.string().default("").nullable().nullish()
-      }) as unknown as ToZod<CompanyOperationsGetCitiesQueryParams>
+  SupplierUserName: z.string().nullable(),
+  secret: z.string().nullable(),
+  startwith: z.string().default('').nullable().nullish(),
+}) as unknown as ToZod<CompanyOperationsGetCitiesQueryParams>
 
 /**
  * @description successful request
