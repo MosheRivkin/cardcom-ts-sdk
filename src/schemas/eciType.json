@@ -1,1 +1,0 @@
-{"type":"string","description":"","x-enumNames":["Empty","NoCavvUcaf","CavvUcafNotIssuer","CavvUcaf"],"enum":["Empty","NoCavvUcaf","CavvUcafNotIssuer","CavvUcaf"],"x-readme-ref-name":"EciType"}

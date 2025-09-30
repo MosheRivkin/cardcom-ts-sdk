@@ -1,1 +1,0 @@
-{"type":"object","additionalProperties":false,"properties":{"Source":{"type":"string","nullable":true},"Medium":{"type":"string","nullable":true},"Campaign":{"type":"string","nullable":true},"Content":{"type":"string","nullable":true},"Term":{"type":"string","nullable":true}},"x-readme-ref-name":"LPUtmData"}

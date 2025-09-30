@@ -1,51 +1,59 @@
 {
-  "name": "cardcom-ts-sdk",
-  "description": "Unofficial TypeScript wrapper for the Cardcom REST API, providing type safety, documentation, schema validation, and convenient fetching.",
-  "version": "1.0.3",
-  "type": "module",
-  "files": [
-    "dist"
-  ],
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      }
-    },
-    "./package.json": "./package.json"
-  },
-  "keywords": [
-    "cardcom",
-    "typescript",
-    "sdk",
-    "api",
-    "zod",
-    "axios"
-  ],
-  "author": "Moshe Rivkin",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mosherivkin/cardcom-ts-sdk.git"
-  },
-  "scripts": {
-    "build": "bunup",
-    "dev": "bunup --watch"
-  },
-  "devDependencies": {
-    "@kubb/plugin-zod": "^4.1.1",
-    "@types/bun": "latest",
-    "bunup": "^0.14.9",
-    "ts-morph": "^27.0.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5",
-    "zod": "^4.0.17"
-  },
-  "dependencies": {
-    "@kubb/plugin-client": "^3.18.0"
-  }
+	"name": "cardcom-ts-sdk",
+	"description": "Unofficial TypeScript wrapper for the Cardcom REST API.",
+	"version": "1.1.0",
+	"type": "module",
+	"files": [
+		"dist"
+	],
+	"module": "./dist/index.js",
+	"main": "./dist/index.cjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		},
+		"./package.json": "./package.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mosherivkin/cardcom-ts-sdk.git"
+	},
+	"author": "Moshe Rivkin",
+	"license": "MIT",
+	"keywords": [
+		"cardcom",
+		"typescript",
+		"sdk",
+		"api",
+		"payments"
+	],
+	"scripts": {
+		"build": "bunup",
+		"dev": "bunup --watch",
+		"typegen": "bunx openapi-typescript ./data/swagger.json -o ./src/schema.ts"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.2.23",
+		"bunup": "^0.14.9",
+		"typescript": "^5.9.2"
+	},
+	"peerDependencies": {
+		"typescript": ">=4.5.0"
+	},
+	"peerDependenciesMeta": {
+		"typescript": {
+			"optional": true
+		}
+	},
+	"dependencies": {
+		"openapi-fetch": "^0.14.0"
+	}
 }

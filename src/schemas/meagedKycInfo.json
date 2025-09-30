@@ -1,1 +1,0 @@
-{"type":"object","additionalProperties":false,"required":["Mcc","MaxNumberOfPayments"],"properties":{"Mcc":{"type":"integer","description":"MCC_CardCom","format":"int32"},"MaxNumberOfPayments":{"type":"number","format":"decimal"},"ElectronicCommerceUrl":{"type":"array","nullable":true,"items":{"type":"string"}}},"x-readme-ref-name":"MeagedKycInfo"}

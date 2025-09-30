@@ -1,1 +1,0 @@
-{"type":"string","description":"","x-enumNames":["PrivateCard","MasterCard","Visa","Maestro","AmericanExpress","Isracard","JBC","Discover","Diners"],"enum":["PrivateCard","MasterCard","Visa","Maestro","AmericanExpress","Isracard","JBC","Discover","Diners"],"x-readme-ref-name":"Brand"}

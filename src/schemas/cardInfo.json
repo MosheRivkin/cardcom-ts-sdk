@@ -1,1 +1,0 @@
-{"type":"string","description":"","x-enumNames":["Israeli","NonIsraeli","FuelCard","ImmediateChargeCard","GiftCard"],"enum":["Israeli","NonIsraeli","FuelCard","ImmediateChargeCard","GiftCard"],"x-readme-ref-name":"CardInfo"}

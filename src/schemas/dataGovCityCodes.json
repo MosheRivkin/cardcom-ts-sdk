@@ -1,1 +1,0 @@
-{"type":"object","additionalProperties":false,"properties":{"Id":{"type":"integer","format":"int64"},"CodeCity":{"type":"integer","format":"int32","nullable":true},"City":{"type":"string","nullable":true},"CityEng":{"type":"string","nullable":true}},"x-readme-ref-name":"DataGov_CityCodes"}

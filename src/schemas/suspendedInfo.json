@@ -1,1 +1,0 @@
-{"type":"object","description":"SuspendedDeal result","additionalProperties":false,"properties":{"SuspendedDealId":{"type":"integer","description":"Suspended deal Id, can be charge via API or the admin panel ","format":"int32"}},"x-readme-ref-name":"SuspendedInfo"}

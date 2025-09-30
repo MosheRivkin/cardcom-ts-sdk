@@ -1,1 +1,0 @@
-{"type":"object","additionalProperties":false,"properties":{"Bank_Code":{"type":"integer","format":"int32"},"Branch_Code":{"type":"integer","format":"int32"},"Branch_Name":{"type":"string","nullable":true},"Branch_Address":{"type":"string","nullable":true},"Banks":{"nullable":true,"oneOf":[{"$ref":"#/components/schemas/Banks"}]}},"x-readme-ref-name":"BanksBranches"}

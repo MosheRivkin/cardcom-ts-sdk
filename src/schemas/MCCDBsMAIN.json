@@ -1,1 +1,0 @@
-{"type":"object","additionalProperties":false,"properties":{"MCC_Code_MainClassification":{"type":"integer"},"MCC_Description_MainClassification":{"type":"string","nullable":true}},"x-readme-ref-name":"MCC_DBs_MAIN"}

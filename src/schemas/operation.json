@@ -1,1 +1,0 @@
-{"type":"string","description":"","x-enumNames":["ChargeOnly","ChargeAndCreateToken","CreateTokenOnly","SuspendedDeal","Do3DSAndSubmit"],"enum":["ChargeOnly","ChargeAndCreateToken","CreateTokenOnly","SuspendedDeal","Do3DSAndSubmit"],"x-readme-ref-name":"Operation"}

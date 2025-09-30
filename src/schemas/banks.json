@@ -1,1 +1,0 @@
-{"type":"object","additionalProperties":false,"properties":{"Bank_Code":{"type":"integer","format":"int32"},"Bank_Name":{"type":"string","nullable":true},"IsMasavDigitalVerificationSupported":{"type":"boolean"},"BanksBranches":{"type":"array","nullable":true,"items":{"$ref":"#/components/schemas/BanksBranches"}}},"x-readme-ref-name":"Banks"}

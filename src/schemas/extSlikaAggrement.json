@@ -1,1 +1,0 @@
-{"type":"object","additionalProperties":false,"properties":{"AgreementId":{"title":"agreement Id","type":"integer","description":"agreement Id","format":"int32"}},"x-readme-ref-name":"ExtSlikaAggrement"}

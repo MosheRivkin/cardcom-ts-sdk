@@ -1,1 +1,0 @@
-{"type":"string","description":"","x-enumNames":["DebtForTracking","NoOtherPaymentMethod","BadDebt"],"enum":["DebtForTracking","NoOtherPaymentMethod","BadDebt"],"x-readme-ref-name":"RecurringStatus"}

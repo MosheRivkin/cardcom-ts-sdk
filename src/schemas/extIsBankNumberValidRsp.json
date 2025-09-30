@@ -1,1 +1,0 @@
-{"type":"object","description":"Is Bank valid","additionalProperties":false,"properties":{"ResponseCode":{"type":"integer","description":"Response code , if it equel to zero than all is OK , else error see Description","format":"int32"},"Description":{"type":"string","description":"Description for errors only","nullable":true}},"x-readme-ref-name":"ExtIsBankNumberValidRsp"}

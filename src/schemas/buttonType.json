@@ -1,1 +1,0 @@
-{"type":"string","description":"","x-enumNames":["Book","Buy","Checkout","Donate","Order","Pay","Plain","Subscribe"],"enum":["Book","Buy","Checkout","Donate","Order","Pay","Plain","Subscribe"],"x-readme-ref-name":"ButtonType"}

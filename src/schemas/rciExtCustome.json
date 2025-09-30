@@ -1,1 +1,0 @@
-{"type":"object","additionalProperties":false,"properties":{"TransactionID":{"type":"integer","format":"int32"},"TranDate":{"type":"string","format":"date-time"},"Description":{"type":"string","nullable":true},"asmacta":{"type":"string","nullable":true},"Sum":{"type":"number","format":"decimal"}},"x-readme-ref-name":"RciExtCustome"}

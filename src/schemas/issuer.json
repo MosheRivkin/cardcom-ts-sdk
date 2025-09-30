@@ -1,1 +1,0 @@
-{"type":"string","description":"","x-enumNames":["NonIsrael","Isracard","CAL","Diners","AmericanExpress","JCB","Laumicard"],"enum":["NonIsrael","Isracard","CAL","Diners","AmericanExpress","JCB","Laumicard"],"x-readme-ref-name":"Issuer"}
