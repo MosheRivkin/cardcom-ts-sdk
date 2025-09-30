@@ -29,8 +29,8 @@ export async function recuringPaymentsChangeStatusForHistoryRecurringToIrrevocab
 ): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData: { ApiUserName?: string | null | undefined; ApiPassword?: string | null | undefined; RowID?: number | null | undefined; ChangeTo?: import("/home/m/dev/git/cardcom-ts-sdk/src/index").RecurringStatus | undefined; } | null = recuringPaymentsChangeStatusForHistoryRecurringToIrrevocableMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ExtIsBankNumberValidRsp> = await request<
+  const requestData: { ApiUserName?: string | null | undefined; ApiPassword?: string | null | undefined; RowID?: number | null | undefined; ChangeTo?: import("src/index").RecurringStatus | undefined; } | null = recuringPaymentsChangeStatusForHistoryRecurringToIrrevocableMutationRequestSchema.parse(data)
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").ExtIsBankNumberValidRsp> = await request<
     RecuringPaymentsChangeStatusForHistoryRecurringToIrrevocableMutationResponse,
     ResponseErrorConfig<RecuringPaymentsChangeStatusForHistoryRecurringToIrrevocable400 | RecuringPaymentsChangeStatusForHistoryRecurringToIrrevocable401>,
     RecuringPaymentsChangeStatusForHistoryRecurringToIrrevocableMutationRequest

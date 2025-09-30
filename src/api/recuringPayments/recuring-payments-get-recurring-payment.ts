@@ -30,7 +30,7 @@ export async function recuringPaymentsGetRecurringPayment(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { apiUserName?: string | null | undefined; apiPassword?: string | null | undefined; AccountId?: number | null | undefined; RecurringId?: number | null | undefined; } | null = recuringPaymentsGetRecurringPaymentQueryRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ExtGetRecurringPaymentRsp> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").ExtGetRecurringPaymentRsp> = await request<
     RecuringPaymentsGetRecurringPaymentQueryResponse,
     ResponseErrorConfig<RecuringPaymentsGetRecurringPayment400 | RecuringPaymentsGetRecurringPayment401>,
     RecuringPaymentsGetRecurringPaymentQueryRequest

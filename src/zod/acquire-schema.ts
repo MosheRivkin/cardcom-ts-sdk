@@ -1,8 +1,8 @@
 import type { Acquire } from '../types/Acquire.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const acquireSchema: z.ZodType<import("/home/m/dev/git/cardcom-ts-sdk/src/index").AcquireEnum, unknown, z.core.$ZodTypeInternals<import("/home/m/dev/git/cardcom-ts-sdk/src/index").AcquireEnum, unknown>> = z.enum([
+export const acquireSchema: z.ZodType<import("src/index").AcquireEnum, unknown, z.core.$ZodTypeInternals<import("src/index").AcquireEnum, unknown>> = z.enum([
   'Unknown',
   'Isracard',
   'CAL',

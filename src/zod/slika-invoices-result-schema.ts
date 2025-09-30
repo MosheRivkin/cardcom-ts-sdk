@@ -1,9 +1,9 @@
 import type { SlikaInvoicesResult } from '../types/SlikaInvoicesResult.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { bankDepositesSchema } from './bank-deposites-schema.ts'
 import { z } from 'zod'
 
-export const slikaInvoicesResultSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<SlikaInvoicesResult>, "passthrough"> = z.object({
+export const slikaInvoicesResultSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<SlikaInvoicesResult>> = z.object({
   DocNumber: z.int().describe('Document Number').optional(),
   DocType: z.int().describe('Document type. 1 = Tax invoice').optional(),
   DocDate: z.date().describe('Date of the document').optional(),

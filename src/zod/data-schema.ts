@@ -1,9 +1,9 @@
 import type { Data } from '../types/Data.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { reportCodesSchema } from './report-codes-schema.ts'
 import { z } from 'zod'
 
-export const dataSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<Data>, "passthrough"> = z.object({
+export const dataSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<Data>> = z.object({
   MuhlafID: z.int().optional(),
   EntryType: z.int().optional(),
   EntryNumber: z.int().optional(),

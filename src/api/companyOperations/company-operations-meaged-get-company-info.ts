@@ -24,11 +24,11 @@ function getCompanyOperationsMeagedGetCompanyInfoUrl(): { method: string; url: "
 export async function companyOperationsMeagedGetCompanyInfo(
   { data }: { data?: CompanyOperationsMeagedGetCompanyInfoMutationRequest },
   config: Partial<RequestConfig<CompanyOperationsMeagedGetCompanyInfoMutationRequest>> & { client?: typeof fetch } = {},
-): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; MeagedSapakInfo?: { SapakNumber?: number | undefined; SapakStatus?: import("/home/m/dev/git/cardcom-ts-sdk/src/index").SapakStatus | undefined; }[] | null | undefined; }> {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; MeagedSapakInfo?: { SapakNumber?: number | undefined; SapakStatus?: import("src/index").SapakStatus | undefined; }[] | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { SupplierUserName: string; Secret: string; BusinessRegistrationNumber?: number | null | undefined; SapakNumber?: number | null | undefined; } | null = companyOperationsMeagedGetCompanyInfoMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").MeagedGetCompanyInfoResponse> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").MeagedGetCompanyInfoResponse> = await request<
     CompanyOperationsMeagedGetCompanyInfoMutationResponse,
     ResponseErrorConfig<Error>,
     CompanyOperationsMeagedGetCompanyInfoMutationRequest

@@ -1,5 +1,5 @@
 import type { CreateTaxInvoiceRequest } from '../types/CreateTaxInvoiceRequest.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { invExtHeadLinesSchema } from './inv-ext-head-lines-schema.ts'
 import { invExtHeadSchema } from './inv-ext-head-schema.ts'
 import { rciExtChequeSchema } from './rci-ext-cheque-schema.ts'
@@ -7,7 +7,7 @@ import { rciExtCustomeSchema } from './rci-ext-custome-schema.ts'
 import { rciExtDealNumSchema } from './rci-ext-deal-num-schema.ts'
 import { z } from 'zod'
 
-export const createTaxInvoiceRequestSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CreateTaxInvoiceRequest>, "passthrough"> = z.object({
+export const createTaxInvoiceRequestSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<CreateTaxInvoiceRequest>> = z.object({
   ApiName: z.string().min(1).describe('Api Name for authentication'),
   ApiPassword: z.string().min(1).describe('Api password for authentication'),
   InvoiceType: z.int().describe('Invoice Type').optional(),

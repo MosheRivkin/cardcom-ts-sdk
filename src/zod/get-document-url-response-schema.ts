@@ -1,8 +1,8 @@
 import type { GetDocumentUrlResponse } from '../types/GetDocumentUrlResponse.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const getDocumentUrlResponseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<GetDocumentUrlResponse>, "passthrough"> = z.object({
+export const getDocumentUrlResponseSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<GetDocumentUrlResponse>> = z.object({
   ResponseCode: z.int().describe('if equel zero then success , else , a develper error see Description for more info ').optional(),
   Description: z.string().max(250).describe('Description of the ResponseCode').nullable().nullish(),
   DocUrl: z.string().describe('URL to the requested document').nullable().nullish(),

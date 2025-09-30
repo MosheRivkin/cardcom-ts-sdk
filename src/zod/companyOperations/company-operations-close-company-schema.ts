@@ -5,7 +5,7 @@ import type {
   CompanyOperationsCloseCompanyMutationRequest,
   CompanyOperationsCloseCompanyMutationResponse,
 } from '../../types/CompanyOperationsCloseCompany.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { acquiredCompanyAccountSchema } from '../acquired-company-account-schema.ts'
 import { errorInfoSchema } from '../error-info-schema.ts'
 import { openNewCompanyResponseSchema } from '../open-new-company-response-schema.ts'
@@ -13,24 +13,24 @@ import { openNewCompanyResponseSchema } from '../open-new-company-response-schem
 /**
  * @description successful request
  */
-export const companyOperationsCloseCompany200Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").OpenNewCompanyResponse>, "passthrough"> = openNewCompanyResponseSchema as unknown as ToZod<CompanyOperationsCloseCompany200>
+export const companyOperationsCloseCompany200Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").OpenNewCompanyResponse>> = openNewCompanyResponseSchema as unknown as ToZod<CompanyOperationsCloseCompany200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const companyOperationsCloseCompany400Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const companyOperationsCloseCompany400Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<CompanyOperationsCloseCompany400>
 
 /**
  * @description Invalid username
  */
-export const companyOperationsCloseCompany401Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const companyOperationsCloseCompany401Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<CompanyOperationsCloseCompany401>
 
-export const companyOperationsCloseCompanyMutationRequestSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodNullable<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").AcquiredCompanyAccount>, "passthrough">> =
+export const companyOperationsCloseCompanyMutationRequestSchema: import("zod").ZodNullable<import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").AcquiredCompanyAccount>>> =
   acquiredCompanyAccountSchema.nullable() as unknown as ToZod<CompanyOperationsCloseCompanyMutationRequest>
 
-export const companyOperationsCloseCompanyMutationResponseSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").OpenNewCompanyResponse>, "passthrough"> =
+export const companyOperationsCloseCompanyMutationResponseSchema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").OpenNewCompanyResponse>> =
   companyOperationsCloseCompany200Schema as unknown as ToZod<CompanyOperationsCloseCompanyMutationResponse>

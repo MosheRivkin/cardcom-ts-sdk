@@ -1,9 +1,9 @@
 import type { DocumentSearchResponse } from '../types/DocumentSearchResponse.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { invHeadLineDtoSchema } from './inv-head-line-dto-schema.ts'
 import { z } from 'zod'
 
-export const documentSearchResponseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<DocumentSearchResponse>, "passthrough"> = z.object({
+export const documentSearchResponseSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<DocumentSearchResponse>> = z.object({
   ResponseCode: z.int().optional(),
   Description: z.string().nullable().nullish(),
   get Documents() {

@@ -1,8 +1,8 @@
 import type { ProcessTransactionResponse } from '../types/ProcessTransactionResponse.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const processTransactionResponseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<ProcessTransactionResponse>, "passthrough"> = z.object({
+export const processTransactionResponseSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<ProcessTransactionResponse>> = z.object({
   ResponseCode: z.int().describe('Response code: 0 - Success / Other values - Error (See Description for more info)').optional(),
   Description: z.string().describe('Description for ResponseCode').nullable().nullish(),
   DealNumber: z.int().describe('Deal number in Cardcom systems').nullable().nullish(),

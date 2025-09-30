@@ -1,8 +1,8 @@
 import type { InvHeadLineDto } from '../types/InvHeadLineDto.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const invHeadLineDtoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<InvHeadLineDto>, "passthrough"> = z.object({
+export const invHeadLineDtoSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<InvHeadLineDto>> = z.object({
   TotalNoVatNIS: z.number().optional(),
   TotalIncludeVATNIS: z.number().optional(),
   VATOnlyNIS: z.number().optional(),

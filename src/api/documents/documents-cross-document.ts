@@ -30,7 +30,7 @@ export async function documentsCrossDocument(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { ApiName?: string | undefined; ApiPassword?: string | undefined; FromDocNumber?: number | undefined; FromDocType?: number | undefined; ToDocumentsList?: { DocNumber?: number | undefined; DocType?: number | undefined; PartialSumToCorss?: number | null | undefined; }[] | undefined; } | null = documentsCrossDocumentMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CrossDocumentResponse> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").CrossDocumentResponse> = await request<
     DocumentsCrossDocumentMutationResponse,
     ResponseErrorConfig<DocumentsCrossDocument400 | DocumentsCrossDocument401>,
     DocumentsCrossDocumentMutationRequest

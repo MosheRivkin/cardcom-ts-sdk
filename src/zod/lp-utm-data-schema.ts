@@ -1,8 +1,8 @@
 import type { LPUtmData } from '../types/LPUtmData.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const lpUtmDataSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<LPUtmData>, "passthrough"> = z.object({
+export const lpUtmDataSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<LPUtmData>> = z.object({
   Source: z.string().nullable().nullish(),
   Medium: z.string().nullable().nullish(),
   Campaign: z.string().nullable().nullish(),

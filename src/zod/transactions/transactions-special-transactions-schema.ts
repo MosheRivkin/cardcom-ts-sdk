@@ -5,7 +5,7 @@ import type {
   TransactionsSpecialTransactionsMutationRequest,
   TransactionsSpecialTransactionsMutationResponse,
 } from '../../types/TransactionsSpecialTransactions.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { errorInfoSchema } from '../error-info-schema.ts'
 import { specialTransactionsReqSchema } from '../special-transactions-req-schema.ts'
 import { specialTransactionsRespSchema } from '../special-transactions-resp-schema.ts'
@@ -13,24 +13,24 @@ import { specialTransactionsRespSchema } from '../special-transactions-resp-sche
 /**
  * @description successful request, see \'ResponseCode\' if request succeeded
  */
-export const transactionsSpecialTransactions200Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").SpecialTransactionsResp>, "passthrough"> = specialTransactionsRespSchema as unknown as ToZod<TransactionsSpecialTransactions200>
+export const transactionsSpecialTransactions200Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").SpecialTransactionsResp>> = specialTransactionsRespSchema as unknown as ToZod<TransactionsSpecialTransactions200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const transactionsSpecialTransactions400Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const transactionsSpecialTransactions400Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<TransactionsSpecialTransactions400>
 
 /**
  * @description Invalid username
  */
-export const transactionsSpecialTransactions401Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const transactionsSpecialTransactions401Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<TransactionsSpecialTransactions401>
 
-export const transactionsSpecialTransactionsMutationRequestSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodNullable<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").SpecialTransactionsReq>, "passthrough">> =
+export const transactionsSpecialTransactionsMutationRequestSchema: import("zod").ZodNullable<import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").SpecialTransactionsReq>>> =
   specialTransactionsReqSchema.nullable() as unknown as ToZod<TransactionsSpecialTransactionsMutationRequest>
 
-export const transactionsSpecialTransactionsMutationResponseSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").SpecialTransactionsResp>, "passthrough"> =
+export const transactionsSpecialTransactionsMutationResponseSchema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").SpecialTransactionsResp>> =
   transactionsSpecialTransactions200Schema as unknown as ToZod<TransactionsSpecialTransactionsMutationResponse>

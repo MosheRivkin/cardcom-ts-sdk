@@ -1,11 +1,11 @@
 import type { Products } from '../types/Products.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
 /**
  * @description Products
  */
-export const productsSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<Products>, "passthrough"> = z
+export const productsSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<Products>> = z
   .object({
     ProductID: z.string().max(50).describe("Product ID , exemple 'AVG-BB-10;").nullable().nullish(),
     Description: z.string().min(1).max(250).describe('product description'),

@@ -1,8 +1,8 @@
 import type { MTI } from '../types/MTI.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const mtiSchema: z.ZodType<import("/home/m/dev/git/cardcom-ts-sdk/src/index").MTIEnum, unknown, z.core.$ZodTypeInternals<import("/home/m/dev/git/cardcom-ts-sdk/src/index").MTIEnum, unknown>> = z.enum([
+export const mtiSchema: z.ZodType<import("src/index").MTIEnum, unknown, z.core.$ZodTypeInternals<import("src/index").MTIEnum, unknown>> = z.enum([
   'Request_100',
   'RequestRepeat_101',
   'ResponseToRequest_110',

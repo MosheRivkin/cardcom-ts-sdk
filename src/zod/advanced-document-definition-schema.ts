@@ -1,12 +1,12 @@
 import type { AdvancedDocumentDefinition } from '../types/AdvancedDocumentDefinition.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { configBoolSchema } from './config-bool-schema.ts'
 import { z } from 'zod'
 
 /**
  * @description Advanced document definition
  */
-export const advancedDocumentDefinitionSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<AdvancedDocumentDefinition>, "passthrough"> = z
+export const advancedDocumentDefinitionSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<AdvancedDocumentDefinition>> = z
   .object({
     get IsAutoCreateUpdateAccount() {
       return configBoolSchema

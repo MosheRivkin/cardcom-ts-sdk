@@ -1,9 +1,9 @@
 import type { MeagedGetCompanyInfoResponse } from '../types/MeagedGetCompanyInfoResponse.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { meagedSapakInfoSchema } from './meaged-sapak-info-schema.ts'
 import { z } from 'zod'
 
-export const meagedGetCompanyInfoResponseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<MeagedGetCompanyInfoResponse>, "passthrough"> = z.object({
+export const meagedGetCompanyInfoResponseSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<MeagedGetCompanyInfoResponse>> = z.object({
   ResponseCode: z.int().describe('if equel zero then success , else , a develper error see Description for more info ').optional(),
   Description: z.string().describe('Description of the ResponseCode').nullable().nullish(),
   get MeagedSapakInfo() {

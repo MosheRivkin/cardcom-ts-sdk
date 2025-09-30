@@ -1,11 +1,11 @@
 import type { DocumentBase } from '../types/DocumentBase.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { advancedDocumentDefinitionSchema } from './advanced-document-definition-schema.ts'
 import { documentToCreateSchema } from './document-to-create-schema.ts'
 import { productsSchema } from './products-schema.ts'
 import { z } from 'zod'
 
-export const documentBaseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<DocumentBase>, "passthrough"> = z.object({
+export const documentBaseSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<DocumentBase>> = z.object({
   get DocumentTypeToCreate() {
     return documentToCreateSchema
       .default('Auto')

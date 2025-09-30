@@ -1,8 +1,8 @@
 import type { MeagedCompanyInfo } from '../types/MeagedCompanyInfo.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const meagedCompanyInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<MeagedCompanyInfo>, "passthrough"> = z.object({
+export const meagedCompanyInfoSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<MeagedCompanyInfo>> = z.object({
   BusinessRegistrationNumber: z.int(),
   NameLegalCorporation: z.string().min(1).describe('Legal Corporation name'),
   NameLegalCorporationEng: z.string().min(1).describe('Legal Corporation name in english'),

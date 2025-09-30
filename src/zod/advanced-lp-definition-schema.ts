@@ -1,11 +1,11 @@
 import type { AdvancedLPDefinition } from '../types/AdvancedLPDefinition.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { jValidateTypeSchema } from './j-validate-type-schema.ts'
 import { threeDSecureStateSchema } from './three-d-secure-state-schema.ts'
 import { virtualTerminalParamsSchema } from './virtual-terminal-params-schema.ts'
 import { z } from 'zod'
 
-export const advancedLpDefinitionSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<AdvancedLPDefinition>, "passthrough"> = z.object({
+export const advancedLpDefinitionSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<AdvancedLPDefinition>> = z.object({
   get VirtualTerminal() {
     return virtualTerminalParamsSchema.describe('virtual terminal mode propertis').nullable().nullish()
   },

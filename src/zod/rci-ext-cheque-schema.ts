@@ -1,8 +1,8 @@
 import type { RciExtCheque } from '../types/RciExtCheque.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const rciExtChequeSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<RciExtCheque>, "passthrough"> = z.object({
+export const rciExtChequeSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<RciExtCheque>> = z.object({
   ChequeNumber: z.string().nullable().nullish(),
   BankNumber: z.int().optional(),
   SnifNumber: z.int().optional(),

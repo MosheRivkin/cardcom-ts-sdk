@@ -1,11 +1,11 @@
 import type { GetLowProfileResult } from '../types/GetLowProfileResult.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
 /**
  * @description Get iframe \\ redirect result
  */
-export const getLowProfileResultSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<GetLowProfileResult>, "passthrough"> = z
+export const getLowProfileResultSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<GetLowProfileResult>> = z
   .object({
     TerminalNumber: z.int().describe('Cardcom terminal number'),
     ApiName: z.string().min(1).describe('Api Name for authentication'),

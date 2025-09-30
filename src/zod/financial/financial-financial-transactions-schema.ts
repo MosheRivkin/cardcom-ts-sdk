@@ -5,7 +5,7 @@ import type {
   FinancialFinancialTransactionsMutationRequest,
   FinancialFinancialTransactionsMutationResponse,
 } from '../../types/FinancialFinancialTransactions.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { errorInfoSchema } from '../error-info-schema.ts'
 import { financialTransactionsReqSchema } from '../financial-transactions-req-schema.ts'
 import { financialTransactionsRespSchema } from '../financial-transactions-resp-schema.ts'
@@ -13,24 +13,24 @@ import { financialTransactionsRespSchema } from '../financial-transactions-resp-
 /**
  * @description successful request
  */
-export const financialFinancialTransactions200Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").FinancialTransactionsResp>, "passthrough"> = financialTransactionsRespSchema as unknown as ToZod<FinancialFinancialTransactions200>
+export const financialFinancialTransactions200Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").FinancialTransactionsResp>> = financialTransactionsRespSchema as unknown as ToZod<FinancialFinancialTransactions200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const financialFinancialTransactions400Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const financialFinancialTransactions400Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<FinancialFinancialTransactions400>
 
 /**
  * @description Invalid username
  */
-export const financialFinancialTransactions401Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const financialFinancialTransactions401Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<FinancialFinancialTransactions401>
 
-export const financialFinancialTransactionsMutationRequestSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodNullable<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").FinancialTransactionsReq>, "passthrough">> =
+export const financialFinancialTransactionsMutationRequestSchema: import("zod").ZodNullable<import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").FinancialTransactionsReq>>> =
   financialTransactionsReqSchema.nullable() as unknown as ToZod<FinancialFinancialTransactionsMutationRequest>
 
-export const financialFinancialTransactionsMutationResponseSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").FinancialTransactionsResp>, "passthrough"> =
+export const financialFinancialTransactionsMutationResponseSchema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").FinancialTransactionsResp>> =
   financialFinancialTransactions200Schema as unknown as ToZod<FinancialFinancialTransactionsMutationResponse>

@@ -1,10 +1,10 @@
 import type { CompanyInfo } from '../types/CompanyInfo.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { citizenshipSchema } from './citizenship-schema.ts'
 import { extSlikaAggrementSchema } from './ext-slika-aggrement-schema.ts'
 import { z } from 'zod'
 
-export const companyInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CompanyInfo>, "passthrough"> = z.object({
+export const companyInfoSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<CompanyInfo>> = z.object({
   Activity: z.string().describe('Business Activity').nullable().nullish(),
   BusinessRegistrationNumber: z.string().min(1).describe('Id Business Number'),
   ContactPerson: z.string().describe('Contact Name').nullable().nullish(),

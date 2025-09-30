@@ -1,12 +1,12 @@
 import type { AcquiredCompanyAccount } from '../types/AcquiredCompanyAccount.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { companyInfoSchema } from './company-info-schema.ts'
 import { kycInfoSchema } from './kyc-info-schema.ts'
 import { terminalInfoSchema } from './terminal-info-schema.ts'
 import { userInfoSchema } from './user-info-schema.ts'
 import { z } from 'zod'
 
-export const acquiredCompanyAccountSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<AcquiredCompanyAccount>, "passthrough"> = z.object({
+export const acquiredCompanyAccountSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<AcquiredCompanyAccount>> = z.object({
   SupplierUserName: z.string().min(1).describe('SupplierUserName'),
   SupplierPassword: z.string().min(1).describe('SupplierPassword'),
   Secret: z.string().min(1).describe('Secret'),

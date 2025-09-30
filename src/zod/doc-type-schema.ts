@@ -1,8 +1,8 @@
 import type { DocType } from '../types/DocType.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const docTypeSchema: z.ZodType<import("/home/m/dev/git/cardcom-ts-sdk/src/index").DocTypeEnum, unknown, z.core.$ZodTypeInternals<import("/home/m/dev/git/cardcom-ts-sdk/src/index").DocTypeEnum, unknown>> = z.enum([
+export const docTypeSchema: z.ZodType<import("src/index").DocTypeEnum, unknown, z.core.$ZodTypeInternals<import("src/index").DocTypeEnum, unknown>> = z.enum([
   'Id',
   'Passport',
   'CertificateOfIncorporation',

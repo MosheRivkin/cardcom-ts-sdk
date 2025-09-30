@@ -1,8 +1,8 @@
 import type { InvExtHeadLines } from '../types/InvExtHeadLines.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const invExtHeadLinesSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<InvExtHeadLines>, "passthrough"> = z.object({
+export const invExtHeadLinesSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<InvExtHeadLines>> = z.object({
   Description: z.string().nullable().nullish(),
   Quantity: z.number().optional(),
   IsPriceIncludeVAT: z.boolean().optional(),

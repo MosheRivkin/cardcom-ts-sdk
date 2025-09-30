@@ -1,12 +1,12 @@
 import type { TransactionReq } from '../types/TransactionReq.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { advancedTranSchema } from './advanced-tran-schema.ts'
 import { cardOwnerInformationSchema } from './card-owner-information-schema.ts'
 import { customFieldSchema } from './custom-field-schema.ts'
 import { documentTranSchema } from './document-tran-schema.ts'
 import { z } from 'zod'
 
-export const transactionReqSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<TransactionReq>, "passthrough"> = z.object({
+export const transactionReqSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<TransactionReq>> = z.object({
   TerminalNumber: z.int().describe('Cardcom terminal number'),
   ApiName: z.string().min(1).describe('Api Name for authentication'),
   Amount: z.number().describe('Amount of transaction'),

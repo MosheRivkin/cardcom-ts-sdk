@@ -30,7 +30,7 @@ export async function tapTransactionsPrepareDevice(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { ApiName: string; ApiPassword: string; TerminalNumber: number; DeviceUUID: string; DeviceManufacturer?: string | null | undefined; DeviceModel?: string | null | undefined; } | null = tapTransactionsPrepareDeviceMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").PrepareDeviceResponse> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").PrepareDeviceResponse> = await request<
     TapTransactionsPrepareDeviceMutationResponse,
     ResponseErrorConfig<TapTransactionsPrepareDevice400 | TapTransactionsPrepareDevice401>,
     TapTransactionsPrepareDeviceMutationRequest

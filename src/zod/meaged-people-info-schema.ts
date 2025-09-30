@@ -1,10 +1,10 @@
 import type { MeagedPeopleInfo } from '../types/MeagedPeopleInfo.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { gender2Schema } from './gender2-schema.ts'
 import { relationsSchema } from './relations-schema.ts'
 import { z } from 'zod'
 
-export const meagedPeopleInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<MeagedPeopleInfo>, "passthrough"> = z.object({
+export const meagedPeopleInfoSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<MeagedPeopleInfo>> = z.object({
   get RelationType() {
     return relationsSchema
   },

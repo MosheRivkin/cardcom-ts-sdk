@@ -30,7 +30,7 @@ export async function transactionsRefundByTransactionId(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { ApiName: string; ApiPassword: string; TransactionId: number; ExternalDealId?: string | null | undefined; ExternalMerchantId?: string | null | undefined; PartialSum?: number | null | undefined; CancelOnly?: boolean | null | undefined; SapakMutav?: string | null | undefined; AllowMultipleRefunds?: boolean | null | undefined; CustomFields?: { Id?: number | undefined; Value?: string | undefined; }[] | null | undefined; } | null = transactionsRefundByTransactionIdMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").RefundByTransactionIdResp> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").RefundByTransactionIdResp> = await request<
     TransactionsRefundByTransactionIdMutationResponse,
     ResponseErrorConfig<TransactionsRefundByTransactionId400 | TransactionsRefundByTransactionId401>,
     TransactionsRefundByTransactionIdMutationRequest

@@ -1,5 +1,5 @@
 import type { LowProfileResult } from '../types/LowProfileResult.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { documentInfoSchema } from './document-info-schema.ts'
 import { lowProfileUiValuesSchema } from './low-profile-ui-values-schema.ts'
 import { lpUtmDataSchema } from './lp-utm-data-schema.ts'
@@ -12,7 +12,7 @@ import { z } from 'zod'
 /**
  * @description Result of the low profile page deal
  */
-export const lowProfileResultSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<LowProfileResult>, "passthrough"> = z
+export const lowProfileResultSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<LowProfileResult>> = z
   .object({
     ResponseCode: z.int().describe('if equel zero then success , else , a develper error see Description for more info ').optional(),
     Description: z.string().describe('Description of the ResponseCode').nullable().nullish(),

@@ -1,12 +1,12 @@
 import type { ListTransactionsReq } from '../types/ListTransactionsReq.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { listTransactionStatusSchema } from './list-transaction-status-schema.ts'
 import { z } from 'zod'
 
 /**
  * @description list transactions request
  */
-export const listTransactionsReqSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<ListTransactionsReq>, "passthrough"> = z
+export const listTransactionsReqSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<ListTransactionsReq>> = z
   .object({
     ApiName: z.string().min(1).describe('Api Name for authentication'),
     ApiPassword: z.string().min(1).describe('Api password for authentication'),

@@ -5,7 +5,7 @@ import type {
   RecuringPaymentsGetMuhlafimByDateMutationRequest,
   RecuringPaymentsGetMuhlafimByDateMutationResponse,
 } from '../../types/RecuringPaymentsGetMuhlafimByDate.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { errorInfoSchema } from '../error-info-schema.ts'
 import { extGetListOfFilesRspSchema } from '../ext-get-list-of-files-rsp-schema.ts'
 import { muhlafimByDateRequestSchema } from '../muhlafim-by-date-request-schema.ts'
@@ -13,26 +13,26 @@ import { muhlafimByDateRequestSchema } from '../muhlafim-by-date-request-schema.
 /**
  * @description successful request
  */
-export const recuringPaymentsGetMuhlafimByDate200Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ExtGetListOfFilesRsp>, "passthrough"> = extGetListOfFilesRspSchema.describe(
+export const recuringPaymentsGetMuhlafimByDate200Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ExtGetListOfFilesRsp>> = extGetListOfFilesRspSchema.describe(
   'List of new Token to update',
 ) as unknown as ToZod<RecuringPaymentsGetMuhlafimByDate200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const recuringPaymentsGetMuhlafimByDate400Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const recuringPaymentsGetMuhlafimByDate400Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<RecuringPaymentsGetMuhlafimByDate400>
 
 /**
  * @description Invalid username
  */
-export const recuringPaymentsGetMuhlafimByDate401Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const recuringPaymentsGetMuhlafimByDate401Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<RecuringPaymentsGetMuhlafimByDate401>
 
-export const recuringPaymentsGetMuhlafimByDateMutationRequestSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodNullable<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").MuhlafimByDateRequest>, "passthrough">> =
+export const recuringPaymentsGetMuhlafimByDateMutationRequestSchema: import("zod").ZodNullable<import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").MuhlafimByDateRequest>>> =
   muhlafimByDateRequestSchema.nullable() as unknown as ToZod<RecuringPaymentsGetMuhlafimByDateMutationRequest>
 
-export const recuringPaymentsGetMuhlafimByDateMutationResponseSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ExtGetListOfFilesRsp>, "passthrough"> =
+export const recuringPaymentsGetMuhlafimByDateMutationResponseSchema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ExtGetListOfFilesRsp>> =
   recuringPaymentsGetMuhlafimByDate200Schema as unknown as ToZod<RecuringPaymentsGetMuhlafimByDateMutationResponse>

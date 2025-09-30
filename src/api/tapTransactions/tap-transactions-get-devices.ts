@@ -30,7 +30,7 @@ export async function tapTransactionsGetDevices(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { ApiName: string; ApiPassword: string; TerminalNumber: number; } | null = tapTransactionsGetDevicesMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ProcessTransactionResponse> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").ProcessTransactionResponse> = await request<
     TapTransactionsGetDevicesMutationResponse,
     ResponseErrorConfig<TapTransactionsGetDevices400 | TapTransactionsGetDevices401>,
     TapTransactionsGetDevicesMutationRequest

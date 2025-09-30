@@ -29,7 +29,7 @@ export async function financialBankDeposites(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { ApiName: string; ApiPassword: string; FromCreateDate: string; ToCreateDate: string; } | null = financialBankDepositesMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").BankDepositesResp> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").BankDepositesResp> = await request<
     FinancialBankDepositesMutationResponse,
     ResponseErrorConfig<FinancialBankDeposites400 | FinancialBankDeposites401>,
     FinancialBankDepositesMutationRequest

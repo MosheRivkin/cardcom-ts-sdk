@@ -1,9 +1,9 @@
 import type { FinancialTransactionsResp } from '../types/FinancialTransactionsResp.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { financialTransactionsSchema } from './financial-transactions-schema.ts'
 import { z } from 'zod'
 
-export const financialTransactionsRespSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<FinancialTransactionsResp>, "passthrough"> = z.object({
+export const financialTransactionsRespSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<FinancialTransactionsResp>> = z.object({
   ResponseCode: z.int().describe('if equel zero then success , else , a develper error see Description for more info ').optional(),
   Description: z.string().max(250).describe('Description of the ResponseCode').nullable().nullish(),
   Page: z.int().optional(),

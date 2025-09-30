@@ -1,9 +1,9 @@
 import type { Banks } from '../types/Banks.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { banksBranchesSchema } from './banks-branches-schema.ts'
 import { z } from 'zod'
 
-export const banksSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<Banks>, "passthrough"> = z.object({
+export const banksSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<Banks>> = z.object({
   Bank_Code: z.int().optional(),
   Bank_Name: z.string().nullable().nullish(),
   IsMasavDigitalVerificationSupported: z.boolean().optional(),

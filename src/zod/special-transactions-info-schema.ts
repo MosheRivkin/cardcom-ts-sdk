@@ -1,8 +1,8 @@
 import type { SpecialTransactionsInfo } from '../types/SpecialTransactionsInfo.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const specialTransactionsInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<SpecialTransactionsInfo>, "passthrough"> = z.object({
+export const specialTransactionsInfoSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<SpecialTransactionsInfo>> = z.object({
   CreateDate: z.date().describe('row Create Date').optional(),
   SpecialType: z.int().describe('Special transaction type ').optional(),
   SpecialTypeDesc: z.string().describe('Special transaction heb desctiption ').optional(),

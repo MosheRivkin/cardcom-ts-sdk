@@ -1,11 +1,11 @@
 import type { Account } from '../types/Account.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
 /**
  * @description Account data
  */
-export const accountSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<Account>, "passthrough"> = z
+export const accountSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<Account>> = z
   .object({
     AccountId: z.int().describe('Unique account Id in cardcom system, account must exist in CardCom system ').optional(),
     Name: z.string().min(1).max(50).describe('Account Company name of last name'),

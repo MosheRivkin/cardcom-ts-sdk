@@ -25,7 +25,7 @@ export async function companyOperationsGetBanks(
 ): Promise<{ Bank_Code?: number | undefined; Bank_Name?: string | null | undefined; IsMasavDigitalVerificationSupported?: boolean | undefined; BanksBranches?: { Bank_Code?: number | undefined; Branch_Code?: number | undefined; Branch_Name?: string | null | undefined; Branch_Address?: string | null | undefined; Banks?: { Bank_Code?: number | undefined; Bank_Name?: string | null | undefined; IsMasavDigitalVerificationSupported?: boolean | undefined; BanksBranches?: any[] | null | undefined; } | null | undefined; }[] | null | undefined; }[]> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CompanyOperationsGetBanks200> = await request<CompanyOperationsGetBanksQueryResponse, ResponseErrorConfig<CompanyOperationsGetBanks401>, unknown>({
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").CompanyOperationsGetBanks200> = await request<CompanyOperationsGetBanksQueryResponse, ResponseErrorConfig<CompanyOperationsGetBanks401>, unknown>({
     method: 'GET',
     url: getCompanyOperationsGetBanksUrl().url.toString(),
     params,

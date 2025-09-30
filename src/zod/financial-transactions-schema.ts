@@ -1,11 +1,11 @@
 import type { FinancialTransactions } from '../types/FinancialTransactions.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { brand2Schema } from './brand2-schema.ts'
 import { linkedTransactionsTypeSchema } from './linked-transactions-type-schema.ts'
 import { txnTypeSchema } from './txn-type-schema.ts'
 import { z } from 'zod'
 
-export const financialTransactionsSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<FinancialTransactions>, "passthrough"> = z.object({
+export const financialTransactionsSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<FinancialTransactions>> = z.object({
   CreateDate: z.date().optional(),
   FirstCardDigits: z.int().nullable().nullish(),
   Id: z.int().optional(),

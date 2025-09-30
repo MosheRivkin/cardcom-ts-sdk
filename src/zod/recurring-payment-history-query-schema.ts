@@ -1,9 +1,9 @@
 import type { RecurringPaymentHistoryQuery } from '../types/RecurringPaymentHistoryQuery.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { filterBySchema } from './filter-by-schema.ts'
 import { z } from 'zod'
 
-export const recurringPaymentHistoryQuerySchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<RecurringPaymentHistoryQuery>, "passthrough"> = z.object({
+export const recurringPaymentHistoryQuerySchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<RecurringPaymentHistoryQuery>> = z.object({
   apiUserName: z.string().describe('API User Name').nullable().nullish(),
   apiPassword: z.string().describe('API Password').nullable().nullish(),
   RowId: z.int().describe('RowId for history').nullable().nullish(),

@@ -1,5 +1,5 @@
 import type { ExtRecurringPaymentsRsp } from '../types/ExtRecurringPaymentsRsp.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { extFlexibleItemRspSchema } from './ext-flexible-item-rsp-schema.ts'
 import { extProductRspSchema } from './ext-product-rsp-schema.ts'
 import { extTimeIntervalRspSchema } from './ext-time-interval-rsp-schema.ts'
@@ -8,7 +8,7 @@ import { z } from 'zod'
 /**
  * @description Recurring Payment info
  */
-export const extRecurringPaymentsRspSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<ExtRecurringPaymentsRsp>, "passthrough"> = z
+export const extRecurringPaymentsRspSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<ExtRecurringPaymentsRsp>> = z
   .object({
     RecurringId: z.int().describe('Cardcom for Recurring Id').nullable().nullish(),
     InternalDecription: z.string().describe('private description - not shown to card holder').nullable().nullish(),

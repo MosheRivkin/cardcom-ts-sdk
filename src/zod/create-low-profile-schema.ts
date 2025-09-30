@@ -1,5 +1,5 @@
 import type { CreateLowProfile } from '../types/CreateLowProfile.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { advancedLpDefinitionSchema } from './advanced-lp-definition-schema.ts'
 import { documentLpSchema } from './document-lp-schema.ts'
 import { lpUtmDataSchema } from './lp-utm-data-schema.ts'
@@ -10,7 +10,7 @@ import { z } from 'zod'
 /**
  * @description create a new one time, Iframe \\ redirect page
  */
-export const createLowProfileSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CreateLowProfile>, "passthrough"> = z
+export const createLowProfileSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<CreateLowProfile>> = z
   .object({
     TerminalNumber: z.int().describe('Cardcom terminal number'),
     ApiName: z.string().min(1).describe('Api Name for authentication'),

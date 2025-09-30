@@ -27,7 +27,7 @@ export async function documentsCancelDoc(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { ApiName: string; ApiPassword: string; DocumentNumber: number; DocumentType: number; IsCancelEmailSend?: boolean | undefined; IsSendSMS?: boolean | undefined; IsCreditCardCancelOnly?: boolean | undefined; } | null = documentsCancelDocMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CancelDocResponse> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").CancelDocResponse> = await request<
     DocumentsCancelDocMutationResponse,
     ResponseErrorConfig<DocumentsCancelDoc400 | DocumentsCancelDoc401>,
     DocumentsCancelDocMutationRequest

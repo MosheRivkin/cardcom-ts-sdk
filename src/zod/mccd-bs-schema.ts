@@ -1,8 +1,8 @@
 import type { MCCDBs } from '../types/MCCDBs.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const mccdBsSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<MCCDBs>, "passthrough"> = z.object({
+export const mccdBsSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<MCCDBs>> = z.object({
   MCC_CardCom: z.int().optional(),
   MCC_Code_Local: z.int().optional(),
   MCC_Code_Master: z.int().optional(),

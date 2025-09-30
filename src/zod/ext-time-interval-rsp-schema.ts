@@ -1,8 +1,8 @@
 import type { ExtTimeIntervalRsp } from '../types/ExtTimeIntervalRsp.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const extTimeIntervalRspSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<ExtTimeIntervalRsp>, "passthrough"> = z.object({
+export const extTimeIntervalRspSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<ExtTimeIntervalRsp>> = z.object({
   TimeIntervalId: z.int().optional(),
   AddDays: z.int().optional(),
   AddWeeks: z.int().optional(),

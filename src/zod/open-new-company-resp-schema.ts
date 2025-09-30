@@ -1,8 +1,8 @@
 import type { OpenNewCompanyResp } from '../types/OpenNewCompanyResp.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const openNewCompanyRespSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<OpenNewCompanyResp>, "passthrough"> = z.object({
+export const openNewCompanyRespSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<OpenNewCompanyResp>> = z.object({
   ResponseCode: z.int().optional(),
   Description: z.string().nullable().nullish(),
   CompanyInternalID: z.string().nullable().nullish(),

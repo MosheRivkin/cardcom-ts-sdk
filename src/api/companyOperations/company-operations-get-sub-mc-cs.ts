@@ -25,7 +25,7 @@ export async function companyOperationsGetSubMcCs(
 ): Promise<{ MCC_CardCom?: number | undefined; MCC_Code_Local?: number | undefined; MCC_Code_Master?: number | undefined; MCC_Code_Visa?: number | undefined; MCC_Description?: string | null | undefined; MCC_Code_MainClassification?: number | undefined; MCC_Description_MainClassification?: string | null | undefined; PriorApprovalForRecruitingABusinessRiskManagement?: boolean | undefined; RecruitmentRouteType?: number | undefined; ATouristMissingDocument?: boolean | undefined; MissingDocumentStatusDefault?: boolean | undefined; RiskLevel?: number | undefined; }[]> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CompanyOperationsGetSubMCCs200> = await request<CompanyOperationsGetSubMCCsQueryResponse, ResponseErrorConfig<CompanyOperationsGetSubMCCs401>, unknown>({
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").CompanyOperationsGetSubMCCs200> = await request<CompanyOperationsGetSubMCCsQueryResponse, ResponseErrorConfig<CompanyOperationsGetSubMCCs401>, unknown>({
     method: 'GET',
     url: getCompanyOperationsGetSubMcCsUrl().url.toString(),
     params,

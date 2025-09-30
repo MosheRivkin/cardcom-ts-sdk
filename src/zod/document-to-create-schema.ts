@@ -1,8 +1,8 @@
 import type { DocumentToCreate } from '../types/DocumentToCreate.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const documentToCreateSchema: z.ZodType<import("/home/m/dev/git/cardcom-ts-sdk/src/index").DocumentToCreateEnum, unknown, z.core.$ZodTypeInternals<import("/home/m/dev/git/cardcom-ts-sdk/src/index").DocumentToCreateEnum, unknown>> = z.enum([
+export const documentToCreateSchema: z.ZodType<import("src/index").DocumentToCreateEnum, unknown, z.core.$ZodTypeInternals<import("src/index").DocumentToCreateEnum, unknown>> = z.enum([
   'Auto',
   'TaxInvoiceAndReceipt',
   'TaxInvoiceAndReceiptRefund',

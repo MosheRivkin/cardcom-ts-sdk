@@ -1,9 +1,9 @@
 import type { BankDepositesResp } from '../types/BankDepositesResp.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { bankDepositesSchema } from './bank-deposites-schema.ts'
 import { z } from 'zod'
 
-export const bankDepositesRespSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<BankDepositesResp>, "passthrough"> = z.object({
+export const bankDepositesRespSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<BankDepositesResp>> = z.object({
   ResponseCode: z.int().describe('if equel zero then success , else , a develper error see Description for more info ').optional(),
   Description: z.string().max(250).describe('Description of the ResponseCode').nullable().nullish(),
   get BankDeposites() {

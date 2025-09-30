@@ -30,7 +30,7 @@ export async function tapTransactionsProcessTransaction(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { ApiName: string; ApiPassword: string; TerminalNumber: number; DeviceUUID: string; TransactionInfo: { Amount: string; Type: number; CreditType: number; NumberOfPayments: number; CustomerName: string; ResponseCode: number; Message: string; Status: string; TransactionId: number; ReturnCode: number; ReturnMessage: string; CardNumber: string; CardExpireDateMMYY: string; CardBrandCode: number; CardIssuerCode: number; CardFinancerCode: number; Token: string; ApprovalNumber: string; ResultRecord: string; UID: string; CustomerEmail?: string | null | undefined; CustomerPhoneNumber?: string | null | undefined; CustomerIdNumber?: string | null | undefined; }; RavMutavTerminalNumber?: number | null | undefined; } | null = tapTransactionsProcessTransactionMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ProcessTransactionResponse> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").ProcessTransactionResponse> = await request<
     TapTransactionsProcessTransactionMutationResponse,
     ResponseErrorConfig<TapTransactionsProcessTransaction400 | TapTransactionsProcessTransaction401>,
     TapTransactionsProcessTransactionMutationRequest

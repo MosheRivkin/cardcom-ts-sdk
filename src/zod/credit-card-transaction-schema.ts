@@ -1,5 +1,5 @@
 import type { CreditCardTransaction } from '../types/CreditCardTransaction.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { actionCodeSchema } from './action-code-schema.ts'
 import { brand2Schema } from './brand2-schema.ts'
 import { eciTypeSchema } from './eci-type-schema.ts'
@@ -7,7 +7,7 @@ import { mtiSchema } from './mti-schema.ts'
 import { tranTypeSchema } from './tran-type-schema.ts'
 import { z } from 'zod'
 
-export const creditCardTransactionSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CreditCardTransaction>, "passthrough"> = z.object({
+export const creditCardTransactionSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<CreditCardTransaction>> = z.object({
   CreateDate: z.date().optional(),
   Id: z.int().optional(),
   SapakNumber: z.int().describe('The Sapak that will get the Money').nullable().nullish(),

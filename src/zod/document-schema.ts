@@ -1,10 +1,10 @@
 import type { Document } from '../types/Document.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { documentBaseSchema } from './document-base-schema.ts'
 import { documentToCreateSchema } from './document-to-create-schema.ts'
 import { z } from 'zod'
 
-export const documentSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<Document>, "passthrough"> = documentBaseSchema.and(
+export const documentSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<Document>> = documentBaseSchema.and(
   z.object({
     ManualNumber: z.string().nullable().nullish(),
     DocumentDate: z.string().nullable().nullish(),

@@ -1,11 +1,11 @@
 import type { CreateLowProfileResponse } from '../types/CreateLowProfileResponse.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
 /**
  * @description Response for creating low profile page
  */
-export const createLowProfileResponseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CreateLowProfileResponse>, "passthrough"> = z
+export const createLowProfileResponseSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<CreateLowProfileResponse>> = z
   .object({
     ResponseCode: z.int().describe('if equel zero then success , else , a develper error see Description for more info ').optional(),
     Description: z.string().max(250).describe('Description of the ResponseCode').nullable().nullish(),

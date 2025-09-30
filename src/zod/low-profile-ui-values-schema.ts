@@ -1,12 +1,12 @@
 import type { LowProfileUIValues } from '../types/LowProfileUIValues.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { customFieldSchema } from './custom-field-schema.ts'
 import { z } from 'zod'
 
 /**
  * @description values that was filled the the card holder
  */
-export const lowProfileUiValuesSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<LowProfileUIValues>, "passthrough"> = z
+export const lowProfileUiValuesSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<LowProfileUIValues>> = z
   .object({
     CardOwnerEmail: z.string().max(50).describe("Card Owner's email").optional(),
     CardOwnerName: z.string().max(50).describe('Card Owner name.').optional(),

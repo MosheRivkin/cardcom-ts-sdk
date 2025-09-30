@@ -1,11 +1,11 @@
 import type { TransactionInfoRequest } from '../types/TransactionInfoRequest.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
 /**
  * @description Get transaction info request
  */
-export const transactionInfoRequestSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<TransactionInfoRequest>, "passthrough"> = z
+export const transactionInfoRequestSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<TransactionInfoRequest>> = z
   .object({
     TerminalNumber: z.int().describe('Terminal Number for authentication'),
     UserName: z.string().min(1).describe('API Name for authentication'),

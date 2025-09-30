@@ -1,9 +1,9 @@
 import type { DtoResponseOfMuhlafimData } from '../types/DtoResponseOfMuhlafimData.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { muhlafimDataSchema } from './muhlafim-data-schema.ts'
 import { z } from 'zod'
 
-export const dtoResponseOfMuhlafimDataSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<DtoResponseOfMuhlafimData>, "passthrough"> = z.object({
+export const dtoResponseOfMuhlafimDataSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<DtoResponseOfMuhlafimData>> = z.object({
   Code: z.int().optional(),
   Description: z.string().nullable().nullish(),
   get Content() {

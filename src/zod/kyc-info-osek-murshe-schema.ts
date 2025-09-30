@@ -1,8 +1,8 @@
 import type { KycInfoOsekMurshe } from '../types/KycInfoOsekMurshe.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const kycInfoOsekMursheSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<KycInfoOsekMurshe>, "passthrough"> = z.object({
+export const kycInfoOsekMursheSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<KycInfoOsekMurshe>> = z.object({
   IsOwnerAddressDifferentFromBusinessAddress: z.boolean().describe('האם כתובת המגורים של הבעלים שונה מכתובת העסק').nullable().nullish(),
   BusinessOwnerHomeNumber: z.string().max(10).describe('מספר הבית בכתובת המגורים של בעל בית העסק').nullable().nullish(),
   BusinessOwnerEntranceNumber: z.string().max(10).describe('כניסה בכתובת המגורים של בעל בית העסק').nullable().nullish(),

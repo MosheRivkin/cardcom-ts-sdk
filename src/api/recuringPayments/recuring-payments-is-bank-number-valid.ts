@@ -30,7 +30,7 @@ export async function recuringPaymentsIsBankNumberValid(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { apiUserName?: string | null | undefined; apiPassword?: string | null | undefined; Bank?: number | undefined; Snif?: number | undefined; Account?: string | null | undefined; } | null = recuringPaymentsIsBankNumberValidQueryRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ExtIsBankNumberValidRsp> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").ExtIsBankNumberValidRsp> = await request<
     RecuringPaymentsIsBankNumberValidQueryResponse,
     ResponseErrorConfig<RecuringPaymentsIsBankNumberValid400 | RecuringPaymentsIsBankNumberValid401>,
     RecuringPaymentsIsBankNumberValidQueryRequest

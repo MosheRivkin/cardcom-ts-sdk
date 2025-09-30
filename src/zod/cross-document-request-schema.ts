@@ -1,12 +1,12 @@
 import type { CrossDocumentRequest } from '../types/CrossDocumentRequest.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { crossDocumentToListSchema } from './cross-document-to-list-schema.ts'
 import { z } from 'zod'
 
 /**
  * @description the From document number
  */
-export const crossDocumentRequestSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CrossDocumentRequest>, "passthrough"> = z
+export const crossDocumentRequestSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<CrossDocumentRequest>> = z
   .object({
     ApiName: z.string().describe('Api Name for authentication').optional(),
     ApiPassword: z.string().describe('Api password for authentication').optional(),

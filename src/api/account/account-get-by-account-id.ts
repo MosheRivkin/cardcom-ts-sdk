@@ -27,7 +27,7 @@ export async function accountGetByAccountId(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { ApiName: string; ApiPassword: string; AccountId: number; } | null = accountGetByAccountIdMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").GetAccountByIdResponse> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").GetAccountByIdResponse> = await request<
     AccountGetByAccountIdMutationResponse,
     ResponseErrorConfig<AccountGetByAccountId400 | AccountGetByAccountId401>,
     AccountGetByAccountIdMutationRequest

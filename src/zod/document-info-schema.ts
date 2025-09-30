@@ -1,12 +1,12 @@
 import type { DocumentInfo } from '../types/DocumentInfo.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { documentTypeSchema } from './document-type-schema.ts'
 import { z } from 'zod'
 
 /**
  * @description Document create response
  */
-export const documentInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<DocumentInfo>, "passthrough"> = z
+export const documentInfoSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<DocumentInfo>> = z
   .object({
     ResponseCode: z.int().describe('if equel zero then success , else , a develper error see Description for more info ').optional(),
     Description: z.string().describe('Description of the ResponseCode').optional(),

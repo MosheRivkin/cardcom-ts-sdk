@@ -1,8 +1,8 @@
 import type { BankDeposites } from '../types/BankDeposites.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const bankDepositesSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<BankDeposites>, "passthrough"> = z.object({
+export const bankDepositesSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<BankDeposites>> = z.object({
   Id: z.int().describe('uniq deposite id').optional(),
   DepositeAt: z.date().describe('Deposite date').optional(),
   SapakNumber: z.int().describe('Sapak Number').optional(),

@@ -1,8 +1,8 @@
 import type { MuhlafimByDateRequest } from '../types/MuhlafimByDateRequest.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const muhlafimByDateRequestSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<MuhlafimByDateRequest>, "passthrough"> = z.object({
+export const muhlafimByDateRequestSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<MuhlafimByDateRequest>> = z.object({
   apiUserName: z.string().min(1).describe('API username'),
   apiPassword: z.string().min(1).describe('API password'),
   fromDate: z.date().min(1).describe('DateTime from'),

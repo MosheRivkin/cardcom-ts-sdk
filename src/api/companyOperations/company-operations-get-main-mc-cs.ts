@@ -25,7 +25,7 @@ export async function companyOperationsGetMainMcCs(
 ): Promise<{ MCC_Code_MainClassification?: number | undefined; MCC_Description_MainClassification?: string | null | undefined; }[]> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CompanyOperationsGetMainMCCs200> = await request<CompanyOperationsGetMainMCCsQueryResponse, ResponseErrorConfig<CompanyOperationsGetMainMCCs401>, unknown>({
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").CompanyOperationsGetMainMCCs200> = await request<CompanyOperationsGetMainMCCsQueryResponse, ResponseErrorConfig<CompanyOperationsGetMainMCCs401>, unknown>({
     method: 'GET',
     url: getCompanyOperationsGetMainMcCsUrl().url.toString(),
     params,

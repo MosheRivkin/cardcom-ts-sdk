@@ -1,11 +1,11 @@
 import type { GooglePayBtnDesign } from '../types/GooglePayBtnDesign.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { buttonColorSchema } from './button-color-schema.ts'
 import { buttonLocaleSchema } from './button-locale-schema.ts'
 import { buttonTypeSchema } from './button-type-schema.ts'
 import { z } from 'zod'
 
-export const googlePayBtnDesignSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<GooglePayBtnDesign>, "passthrough"> = z.object({
+export const googlePayBtnDesignSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<GooglePayBtnDesign>> = z.object({
   get ButtonColor() {
     return buttonColorSchema.describe('GPay button color').optional()
   },

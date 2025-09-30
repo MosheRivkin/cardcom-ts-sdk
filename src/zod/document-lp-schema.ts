@@ -1,9 +1,9 @@
 import type { DocumentLP } from '../types/DocumentLP.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { documentBaseSchema } from './document-base-schema.ts'
 import { z } from 'zod'
 
-export const documentLpSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<DocumentLP>, "passthrough"> = documentBaseSchema.and(
+export const documentLpSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<DocumentLP>> = documentBaseSchema.and(
   z.object({
     IsAllowEditDocument: z
       .boolean()

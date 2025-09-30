@@ -1,9 +1,9 @@
 import type { OpenMeagedResponse } from '../types/OpenMeagedResponse.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { sapakStatusSchema } from './sapak-status-schema.ts'
 import { z } from 'zod'
 
-export const openMeagedResponseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<OpenMeagedResponse>, "passthrough"> = z.object({
+export const openMeagedResponseSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<OpenMeagedResponse>> = z.object({
   get SapakStatus() {
     return sapakStatusSchema.describe('SapakNumber stats').optional()
   },

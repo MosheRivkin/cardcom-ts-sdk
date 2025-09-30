@@ -30,7 +30,7 @@ export async function recuringPaymentsGetMuhlafimByDate(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { apiUserName: string; apiPassword: string; fromDate: string; toDate: string; } | null = recuringPaymentsGetMuhlafimByDateMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ExtGetListOfFilesRsp> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").ExtGetListOfFilesRsp> = await request<
     RecuringPaymentsGetMuhlafimByDateMutationResponse,
     ResponseErrorConfig<RecuringPaymentsGetMuhlafimByDate400 | RecuringPaymentsGetMuhlafimByDate401>,
     RecuringPaymentsGetMuhlafimByDateMutationRequest

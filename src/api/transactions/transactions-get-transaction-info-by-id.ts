@@ -30,7 +30,7 @@ export async function transactionsGetTransactionInfoById(
   const { client: request = fetch, ...requestConfig } = config
 
   const requestData: { TerminalNumber: number; UserName: string; UserPassword: string; InternalDealNumber: number; } | null = transactionsGetTransactionInfoByIdMutationRequestSchema.parse(data)
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").TransactionsGetTransactionInfoById200> = await request<
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").TransactionsGetTransactionInfoById200> = await request<
     TransactionsGetTransactionInfoByIdMutationResponse,
     ResponseErrorConfig<TransactionsGetTransactionInfoById400 | TransactionsGetTransactionInfoById401>,
     TransactionsGetTransactionInfoByIdMutationRequest

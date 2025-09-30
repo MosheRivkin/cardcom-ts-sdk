@@ -25,7 +25,7 @@ export async function companyOperationsGetStreets(
 ): Promise<{ Id?: number | undefined; CodeStreet?: number | null | undefined; Street?: string | null | undefined; CityCode?: number | null | undefined; StreetEng?: string | null | undefined; }[]> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CompanyOperationsGetStreets200> = await request<CompanyOperationsGetStreetsQueryResponse, ResponseErrorConfig<CompanyOperationsGetStreets401>, unknown>({
+  const res: import("@kubb/plugin-client/clients/axios").ResponseConfig<import("src/index").CompanyOperationsGetStreets200> = await request<CompanyOperationsGetStreetsQueryResponse, ResponseErrorConfig<CompanyOperationsGetStreets401>, unknown>({
     method: 'GET',
     url: getCompanyOperationsGetStreetsUrl().url.toString(),
     params,

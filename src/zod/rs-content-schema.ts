@@ -1,11 +1,11 @@
 import type { RSContent } from '../types/RSContent.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { companyOperationsErrorSchema } from './company-operations-error-schema.ts'
 import { errorInfoSchema } from './error-info-schema.ts'
 import { httpStatusCodeSchema } from './http-status-code-schema.ts'
 import { z } from 'zod'
 
-export const rsContentSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<RSContent>, "passthrough"> = errorInfoSchema.and(
+export const rsContentSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<RSContent>> = errorInfoSchema.and(
   z.object({
     get DocumentsErrorResults() {
       return z.array(companyOperationsErrorSchema).nullable().nullish()

@@ -5,7 +5,7 @@ import type {
   FinancialCreditCardTransactionsMutationRequest,
   FinancialCreditCardTransactionsMutationResponse,
 } from '../../types/FinancialCreditCardTransactions.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { creditCardTransactionsReqSchema } from '../credit-card-transactions-req-schema.ts'
 import { creditCardTransactionsRespSchema } from '../credit-card-transactions-resp-schema.ts'
 import { errorInfoSchema } from '../error-info-schema.ts'
@@ -13,24 +13,24 @@ import { errorInfoSchema } from '../error-info-schema.ts'
 /**
  * @description successful request
  */
-export const financialCreditCardTransactions200Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CreditCardTransactionsResp>, "passthrough"> = creditCardTransactionsRespSchema as unknown as ToZod<FinancialCreditCardTransactions200>
+export const financialCreditCardTransactions200Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").CreditCardTransactionsResp>> = creditCardTransactionsRespSchema as unknown as ToZod<FinancialCreditCardTransactions200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const financialCreditCardTransactions400Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const financialCreditCardTransactions400Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<FinancialCreditCardTransactions400>
 
 /**
  * @description Invalid username
  */
-export const financialCreditCardTransactions401Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const financialCreditCardTransactions401Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<FinancialCreditCardTransactions401>
 
-export const financialCreditCardTransactionsMutationRequestSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodNullable<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CreditCardTransactionsReq>, "passthrough">> =
+export const financialCreditCardTransactionsMutationRequestSchema: import("zod").ZodNullable<import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").CreditCardTransactionsReq>>> =
   creditCardTransactionsReqSchema.nullable() as unknown as ToZod<FinancialCreditCardTransactionsMutationRequest>
 
-export const financialCreditCardTransactionsMutationResponseSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CreditCardTransactionsResp>, "passthrough"> =
+export const financialCreditCardTransactionsMutationResponseSchema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").CreditCardTransactionsResp>> =
   financialCreditCardTransactions200Schema as unknown as ToZod<FinancialCreditCardTransactionsMutationResponse>

@@ -1,8 +1,8 @@
 import type { TXNType } from '../types/TXNType.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const txnTypeSchema: z.ZodType<import("/home/m/dev/git/cardcom-ts-sdk/src/index").TXNTypeEnum, unknown, z.core.$ZodTypeInternals<import("/home/m/dev/git/cardcom-ts-sdk/src/index").TXNTypeEnum, unknown>> = z.union([
+export const txnTypeSchema: z.ZodType<import("src/index").TXNTypeEnum, unknown, z.core.$ZodTypeInternals<import("src/index").TXNTypeEnum, unknown>> = z.union([
   z.literal(1),
   z.literal(2),
   z.literal(3),

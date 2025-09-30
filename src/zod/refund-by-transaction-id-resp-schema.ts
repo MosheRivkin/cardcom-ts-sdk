@@ -1,8 +1,8 @@
 import type { RefundByTransactionIdResp } from '../types/RefundByTransactionIdResp.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { z } from 'zod'
 
-export const refundByTransactionIdRespSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<RefundByTransactionIdResp>, "passthrough"> = z.object({
+export const refundByTransactionIdRespSchema: z.ZodObject<import("@kubb/plugin-zod/utils").ZodShape<RefundByTransactionIdResp>> = z.object({
   ResponseCode: z.int().describe('if equel zero then success , else , Description for more info ').optional(),
   Description: z.string().max(250).describe('Description of the ResponseCode').nullable().nullish(),
   NewTranzactionId: z.int().describe('refund transaction id ').nullable().nullish(),

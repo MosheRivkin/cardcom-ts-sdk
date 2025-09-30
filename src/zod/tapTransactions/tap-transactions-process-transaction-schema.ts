@@ -5,7 +5,7 @@ import type {
   TapTransactionsProcessTransactionMutationRequest,
   TapTransactionsProcessTransactionMutationResponse,
 } from '../../types/TapTransactionsProcessTransaction.ts'
-import type { ToZod } from '@kubb/plugin-zod/utils/v4'
+import type { ToZod } from '@kubb/plugin-zod/utils'
 import { errorInfoSchema } from '../error-info-schema.ts'
 import { processTransactionRequestSchema } from '../process-transaction-request-schema.ts'
 import { processTransactionResponseSchema } from '../process-transaction-response-schema.ts'
@@ -13,24 +13,24 @@ import { processTransactionResponseSchema } from '../process-transaction-respons
 /**
  * @description Successful request
  */
-export const tapTransactionsProcessTransaction200Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ProcessTransactionResponse>, "passthrough"> = processTransactionResponseSchema as unknown as ToZod<TapTransactionsProcessTransaction200>
+export const tapTransactionsProcessTransaction200Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ProcessTransactionResponse>> = processTransactionResponseSchema as unknown as ToZod<TapTransactionsProcessTransaction200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const tapTransactionsProcessTransaction400Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const tapTransactionsProcessTransaction400Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<TapTransactionsProcessTransaction400>
 
 /**
  * @description Invalid username
  */
-export const tapTransactionsProcessTransaction401Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
+export const tapTransactionsProcessTransaction401Schema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ErrorInfo>> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<TapTransactionsProcessTransaction401>
 
-export const tapTransactionsProcessTransactionMutationRequestSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodNullable<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ProcessTransactionRequest>, "passthrough">> =
+export const tapTransactionsProcessTransactionMutationRequestSchema: import("zod").ZodNullable<import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ProcessTransactionRequest>>> =
   processTransactionRequestSchema.nullable() as unknown as ToZod<TapTransactionsProcessTransactionMutationRequest>
 
-export const tapTransactionsProcessTransactionMutationResponseSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ProcessTransactionResponse>, "passthrough"> =
+export const tapTransactionsProcessTransactionMutationResponseSchema: import("zod").ZodObject<import("@kubb/plugin-zod/utils").ZodShape<import("src/index").ProcessTransactionResponse>> =
   tapTransactionsProcessTransaction200Schema as unknown as ToZod<TapTransactionsProcessTransactionMutationResponse>
