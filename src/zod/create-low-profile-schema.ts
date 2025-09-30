@@ -10,7 +10,7 @@ import { z } from 'zod'
 /**
  * @description create a new one time, Iframe \\ redirect page
  */
-export const createLowProfileSchema = z
+export const createLowProfileSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CreateLowProfile>, "passthrough"> = z
   .object({
     TerminalNumber: z.int().describe('Cardcom terminal number'),
     ApiName: z.string().min(1).describe('Api Name for authentication'),

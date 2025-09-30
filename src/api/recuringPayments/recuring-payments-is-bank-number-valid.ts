@@ -13,8 +13,8 @@ import {
   recuringPaymentsIsBankNumberValidQueryRequestSchema,
 } from '../../zod/recuringPayments/recuring-payments-is-bank-number-valid-schema.ts'
 
-function getRecuringPaymentsIsBankNumberValidUrl() {
-  const res = { method: 'GET', url: `https://secure.cardcom.solutions/api/v11/RecuringPayments/IsBankNumberValid` as const }
+function getRecuringPaymentsIsBankNumberValidUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/RecuringPayments/IsBankNumberValid"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/RecuringPayments/IsBankNumberValid"; } = { method: 'GET', url: `https://secure.cardcom.solutions/api/v11/RecuringPayments/IsBankNumberValid` as const }
   return res
 }
 
@@ -26,11 +26,11 @@ function getRecuringPaymentsIsBankNumberValidUrl() {
 export async function recuringPaymentsIsBankNumberValid(
   { data }: { data?: RecuringPaymentsIsBankNumberValidQueryRequest },
   config: Partial<RequestConfig<RecuringPaymentsIsBankNumberValidQueryRequest>> & { client?: typeof fetch } = {},
-) {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData = recuringPaymentsIsBankNumberValidQueryRequestSchema.parse(data)
-  const res = await request<
+  const requestData: { apiUserName?: string | null | undefined; apiPassword?: string | null | undefined; Bank?: number | undefined; Snif?: number | undefined; Account?: string | null | undefined; } | null = recuringPaymentsIsBankNumberValidQueryRequestSchema.parse(data)
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ExtIsBankNumberValidRsp> = await request<
     RecuringPaymentsIsBankNumberValidQueryResponse,
     ResponseErrorConfig<RecuringPaymentsIsBankNumberValid400 | RecuringPaymentsIsBankNumberValid401>,
     RecuringPaymentsIsBankNumberValidQueryRequest

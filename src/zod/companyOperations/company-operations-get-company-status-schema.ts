@@ -9,7 +9,7 @@ import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { rsContentSchema } from '../rs-content-schema.ts'
 import { z } from 'zod'
 
-export const companyOperationsGetCompanyStatusQueryParamsSchema = z.object({
+export const companyOperationsGetCompanyStatusQueryParamsSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CompanyOperationsGetCompanyStatusQueryParams>, "passthrough"> = z.object({
   companyNumber: z.coerce.number().int(),
   terminalNumber: z.coerce.number().int(),
 }) as unknown as ToZod<CompanyOperationsGetCompanyStatusQueryParams>
@@ -17,17 +17,17 @@ export const companyOperationsGetCompanyStatusQueryParamsSchema = z.object({
 /**
  * @description successful request
  */
-export const companyOperationsGetCompanyStatus200Schema = rsContentSchema as unknown as ToZod<CompanyOperationsGetCompanyStatus200>
+export const companyOperationsGetCompanyStatus200Schema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").RSContent>, "passthrough"> = rsContentSchema as unknown as ToZod<CompanyOperationsGetCompanyStatus200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const companyOperationsGetCompanyStatus400Schema = rsContentSchema as unknown as ToZod<CompanyOperationsGetCompanyStatus400>
+export const companyOperationsGetCompanyStatus400Schema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").RSContent>, "passthrough"> = rsContentSchema as unknown as ToZod<CompanyOperationsGetCompanyStatus400>
 
 /**
  * @description Invalid username
  */
-export const companyOperationsGetCompanyStatus401Schema = rsContentSchema as unknown as ToZod<CompanyOperationsGetCompanyStatus401>
+export const companyOperationsGetCompanyStatus401Schema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").RSContent>, "passthrough"> = rsContentSchema as unknown as ToZod<CompanyOperationsGetCompanyStatus401>
 
-export const companyOperationsGetCompanyStatusQueryResponseSchema =
+export const companyOperationsGetCompanyStatusQueryResponseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").RSContent>, "passthrough"> =
   companyOperationsGetCompanyStatus200Schema as unknown as ToZod<CompanyOperationsGetCompanyStatusQueryResponse>

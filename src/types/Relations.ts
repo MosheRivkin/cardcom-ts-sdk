@@ -1,4 +1,4 @@
-export const relations = {
+export const relations: { readonly AuthorizedSignature: "AuthorizedSignature"; readonly AuthorizedSignatureForeignResident: "AuthorizedSignatureForeignResident"; } = {
   AuthorizedSignature: 'AuthorizedSignature',
   AuthorizedSignatureForeignResident: 'AuthorizedSignatureForeignResident',
 } as const

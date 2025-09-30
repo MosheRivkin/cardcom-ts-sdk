@@ -5,7 +5,7 @@ import { threeDSecureStateSchema } from './three-d-secure-state-schema.ts'
 import { virtualTerminalParamsSchema } from './virtual-terminal-params-schema.ts'
 import { z } from 'zod'
 
-export const advancedLpDefinitionSchema = z.object({
+export const advancedLpDefinitionSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<AdvancedLPDefinition>, "passthrough"> = z.object({
   get VirtualTerminal() {
     return virtualTerminalParamsSchema.describe('virtual terminal mode propertis').nullable().nullish()
   },

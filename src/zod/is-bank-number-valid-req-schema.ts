@@ -5,7 +5,7 @@ import { z } from 'zod'
 /**
  * @description Is Bank valid
  */
-export const isBankNumberValidReqSchema = z
+export const isBankNumberValidReqSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<IsBankNumberValidReq>, "passthrough"> = z
   .object({
     apiUserName: z.string().describe('API User Name').nullable().nullish(),
     apiPassword: z.string().describe('API Password').nullable().nullish(),

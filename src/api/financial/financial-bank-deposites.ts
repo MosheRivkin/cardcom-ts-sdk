@@ -13,8 +13,8 @@ import {
   financialBankDepositesMutationRequestSchema,
 } from '../../zod/financial/financial-bank-deposites-schema.ts'
 
-function getFinancialBankDepositesUrl() {
-  const res = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Financial/BankDeposites` as const }
+function getFinancialBankDepositesUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/Financial/BankDeposites"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/Financial/BankDeposites"; } = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Financial/BankDeposites` as const }
   return res
 }
 
@@ -25,11 +25,11 @@ function getFinancialBankDepositesUrl() {
 export async function financialBankDeposites(
   { data }: { data?: FinancialBankDepositesMutationRequest },
   config: Partial<RequestConfig<FinancialBankDepositesMutationRequest>> & { client?: typeof fetch } = {},
-) {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; BankDeposites?: { Id?: number | undefined; DepositeAt?: string | undefined; SapakNumber?: number | undefined; Amount?: number | undefined; BankNumber?: number | undefined; BranchNumber?: number | undefined; AccountNumber?: number | undefined; Currency?: number | undefined; }[] | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData = financialBankDepositesMutationRequestSchema.parse(data)
-  const res = await request<
+  const requestData: { ApiName: string; ApiPassword: string; FromCreateDate: string; ToCreateDate: string; } | null = financialBankDepositesMutationRequestSchema.parse(data)
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").BankDepositesResp> = await request<
     FinancialBankDepositesMutationResponse,
     ResponseErrorConfig<FinancialBankDeposites400 | FinancialBankDeposites401>,
     FinancialBankDepositesMutationRequest

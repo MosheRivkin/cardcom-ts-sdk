@@ -13,23 +13,23 @@ import { invResponseSchema } from '../inv-response-schema.ts'
 /**
  * @description successful request
  */
-export const documentsCreateTaxInvoice200Schema = invResponseSchema as unknown as ToZod<DocumentsCreateTaxInvoice200>
+export const documentsCreateTaxInvoice200Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").InvResponse>, "passthrough"> = invResponseSchema as unknown as ToZod<DocumentsCreateTaxInvoice200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const documentsCreateTaxInvoice400Schema = errorInfoSchema.describe(
+export const documentsCreateTaxInvoice400Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<DocumentsCreateTaxInvoice400>
 
 /**
  * @description Invalid username
  */
-export const documentsCreateTaxInvoice401Schema = errorInfoSchema.describe(
+export const documentsCreateTaxInvoice401Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<DocumentsCreateTaxInvoice401>
 
-export const documentsCreateTaxInvoiceMutationRequestSchema =
+export const documentsCreateTaxInvoiceMutationRequestSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodNullable<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CreateTaxInvoiceRequest>, "passthrough">> =
   createTaxInvoiceRequestSchema.nullable() as unknown as ToZod<DocumentsCreateTaxInvoiceMutationRequest>
 
-export const documentsCreateTaxInvoiceMutationResponseSchema = documentsCreateTaxInvoice200Schema as unknown as ToZod<DocumentsCreateTaxInvoiceMutationResponse>
+export const documentsCreateTaxInvoiceMutationResponseSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").InvResponse>, "passthrough"> = documentsCreateTaxInvoice200Schema as unknown as ToZod<DocumentsCreateTaxInvoiceMutationResponse>

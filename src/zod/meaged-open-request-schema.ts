@@ -5,7 +5,7 @@ import { meagedKycInfoSchema } from './meaged-kyc-info-schema.ts'
 import { meagedPeopleInfoSchema } from './meaged-people-info-schema.ts'
 import { z } from 'zod'
 
-export const meagedOpenRequestSchema = z.object({
+export const meagedOpenRequestSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<MeagedOpenRequest>, "passthrough"> = z.object({
   IsValidationOnly: z.boolean().describe('Do only validation for the recquest and do not open a new company! for Dev-test only'),
   SupplierUserName: z.string().min(1).describe('Supplier User Name'),
   Secret: z.string().min(1).describe('Supplier Secret'),

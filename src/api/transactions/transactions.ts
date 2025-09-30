@@ -7,7 +7,7 @@ import { transactionsRefundByTransactionId } from './transactions-refund-by-tran
 import { transactionsSpecialTransactions } from './transactions-special-transactions.ts'
 import { transactionsTransaction } from './transactions-transaction.ts'
 
-export function transactions() {
+export function transactions(): { transactionsListTransactions: typeof transactionsListTransactions; transactionsGetTransactionInfoById: typeof transactionsGetTransactionInfoById; transactionsTransaction: typeof transactionsTransaction; transactionsRefundByTransactionId: typeof transactionsRefundByTransactionId; transactionsSpecialTransactions: typeof transactionsSpecialTransactions; transactionsGetTransactionByExternalUniqTran: typeof transactionsGetTransactionByExternalUniqTran; } {
   return {
     transactionsListTransactions,
     transactionsGetTransactionInfoById,

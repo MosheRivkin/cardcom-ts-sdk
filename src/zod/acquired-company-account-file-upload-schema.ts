@@ -3,7 +3,7 @@ import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { documentsInfoSchema } from './documents-info-schema.ts'
 import { z } from 'zod'
 
-export const acquiredCompanyAccountFileUploadSchema = z.object({
+export const acquiredCompanyAccountFileUploadSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<AcquiredCompanyAccountFileUpload>, "passthrough"> = z.object({
   get DocumentsInfo() {
     return z.array(documentsInfoSchema).describe('Document for upload').nullable().nullish()
   },

@@ -1,4 +1,4 @@
-export const brand2 = {
+export const brand2: { readonly MasterCard_1: "MasterCard_1"; readonly Visa_2: "Visa_2"; readonly Diners_3: "Diners_3"; readonly Amex_4: "Amex_4"; readonly Isracard_5: "Isracard_5"; } = {
   MasterCard_1: 'MasterCard_1',
   Visa_2: 'Visa_2',
   Diners_3: 'Diners_3',

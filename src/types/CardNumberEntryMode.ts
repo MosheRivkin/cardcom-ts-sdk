@@ -1,4 +1,4 @@
-export const cardNumberEntryMode = {
+export const cardNumberEntryMode: { readonly MagneticStip: "MagneticStip"; readonly SelfService: "SelfService"; readonly GasStationSelfService: "GasStationSelfService"; readonly Contactless: "Contactless"; readonly EmvContactless: "EmvContactless"; readonly MobileContactless: "MobileContactless"; readonly EmvMobileContactless: "EmvMobileContactless"; readonly MobileNumber: "MobileNumber"; readonly Emv: "Emv"; readonly Phone: "Phone"; readonly SignatureOnly: "SignatureOnly"; readonly Internet: "Internet"; readonly Fallback: "Fallback"; readonly EmptyCandidateList: "EmptyCandidateList"; } = {
   MagneticStip: 'MagneticStip',
   SelfService: 'SelfService',
   GasStationSelfService: 'GasStationSelfService',

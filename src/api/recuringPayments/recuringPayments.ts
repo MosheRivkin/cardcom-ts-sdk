@@ -7,7 +7,7 @@ import { recuringPaymentsGetRecurringPaymentHistory } from './recuring-payments-
 import { recuringPaymentsGetRecurringPayment } from './recuring-payments-get-recurring-payment.ts'
 import { recuringPaymentsIsBankNumberValid } from './recuring-payments-is-bank-number-valid.ts'
 
-export function recuringPayments() {
+export function recuringPayments(): { recuringPaymentsGetMuhlafimFile: typeof recuringPaymentsGetMuhlafimFile; recuringPaymentsGetRecurringPayment: typeof recuringPaymentsGetRecurringPayment; recuringPaymentsGetRecurringPaymentHistory: typeof recuringPaymentsGetRecurringPaymentHistory; recuringPaymentsGetMuhlafimByDate: typeof recuringPaymentsGetMuhlafimByDate; recuringPaymentsIsBankNumberValid: typeof recuringPaymentsIsBankNumberValid; recuringPaymentsChangeStatusForHistoryRecurringToIrrevocable: typeof recuringPaymentsChangeStatusForHistoryRecurringToIrrevocable; } {
   return {
     recuringPaymentsGetMuhlafimFile,
     recuringPaymentsGetRecurringPayment,

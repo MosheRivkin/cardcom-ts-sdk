@@ -2,7 +2,7 @@ import type { GetExternalUniqTranIdStatusReq } from '../types/GetExternalUniqTra
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const getExternalUniqTranIdStatusReqSchema = z.object({
+export const getExternalUniqTranIdStatusReqSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<GetExternalUniqTranIdStatusReq>, "passthrough"> = z.object({
   TerminalNumber: z.int().describe('Cardcom terminal number'),
   ApiName: z.string().min(1).describe('Api Name for authentication'),
   ExternalUniqTranId: z

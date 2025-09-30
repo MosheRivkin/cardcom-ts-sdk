@@ -13,8 +13,8 @@ import {
   tapTransactionsPrepareDeviceMutationRequestSchema,
 } from '../../zod/tapTransactions/tap-transactions-prepare-device-schema.ts'
 
-function getTapTransactionsPrepareDeviceUrl() {
-  const res = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/TapTransactions/PrepareDevice` as const }
+function getTapTransactionsPrepareDeviceUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/TapTransactions/PrepareDevice"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/TapTransactions/PrepareDevice"; } = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/TapTransactions/PrepareDevice` as const }
   return res
 }
 
@@ -26,11 +26,11 @@ function getTapTransactionsPrepareDeviceUrl() {
 export async function tapTransactionsPrepareDevice(
   { data }: { data?: TapTransactionsPrepareDeviceMutationRequest },
   config: Partial<RequestConfig<TapTransactionsPrepareDeviceMutationRequest>> & { client?: typeof fetch } = {},
-) {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; TPN?: string | null | undefined; MerchantCode?: string | null | undefined; SapakMutavNumber?: string | null | undefined; RavMutavTerminalNumber?: number | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData = tapTransactionsPrepareDeviceMutationRequestSchema.parse(data)
-  const res = await request<
+  const requestData: { ApiName: string; ApiPassword: string; TerminalNumber: number; DeviceUUID: string; DeviceManufacturer?: string | null | undefined; DeviceModel?: string | null | undefined; } | null = tapTransactionsPrepareDeviceMutationRequestSchema.parse(data)
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").PrepareDeviceResponse> = await request<
     TapTransactionsPrepareDeviceMutationResponse,
     ResponseErrorConfig<TapTransactionsPrepareDevice400 | TapTransactionsPrepareDevice401>,
     TapTransactionsPrepareDeviceMutationRequest

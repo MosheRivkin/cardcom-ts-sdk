@@ -2,6 +2,6 @@
 
 import { accountGetByAccountId } from './account-get-by-account-id.ts'
 
-export function account() {
+export function account(): { accountGetByAccountId: typeof accountGetByAccountId; } {
   return { accountGetByAccountId }
 }

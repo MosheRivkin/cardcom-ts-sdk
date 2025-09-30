@@ -1,4 +1,4 @@
-export const salePlatform2Enum = {
+export const salePlatform2Enum: { readonly PhysicalSale: 0; readonly Phone: 1; readonly Web: 2; readonly LandingPage: 3; } = {
   PhysicalSale: 0,
   Phone: 1,
   Web: 2,

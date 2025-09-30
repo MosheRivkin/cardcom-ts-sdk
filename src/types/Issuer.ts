@@ -1,4 +1,4 @@
-export const issuer = {
+export const issuer: { readonly NonIsrael: "NonIsrael"; readonly Isracard: "Isracard"; readonly CAL: "CAL"; readonly Diners: "Diners"; readonly AmericanExpress: "AmericanExpress"; readonly JCB: "JCB"; readonly Laumicard: "Laumicard"; } = {
   NonIsrael: 'NonIsrael',
   Isracard: 'Isracard',
   CAL: 'CAL',

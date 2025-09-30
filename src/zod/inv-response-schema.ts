@@ -2,7 +2,7 @@ import type { InvResponse } from '../types/InvResponse.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const invResponseSchema = z.object({
+export const invResponseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<InvResponse>, "passthrough"> = z.object({
   ResponseCode: z.int().optional(),
   Description: z.string().nullable().nullish(),
   InvoiceNumber: z.int().optional(),

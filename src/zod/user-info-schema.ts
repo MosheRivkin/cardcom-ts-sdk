@@ -4,7 +4,7 @@ import { genderSchema } from './gender-schema.ts'
 import { humanIdTypesSchema } from './human-id-types-schema.ts'
 import { z } from 'zod'
 
-export const userInfoSchema = z.object({
+export const userInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<UserInfo>, "passthrough"> = z.object({
   StreetCode: z
     .int()
     .describe('Street code - get list of streets from https://secure.cardcom.solutions/api/v11/CompanyOperations/GetStreets by city code')

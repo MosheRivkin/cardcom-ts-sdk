@@ -5,7 +5,7 @@ import { documentToCreateSchema } from './document-to-create-schema.ts'
 import { productsSchema } from './products-schema.ts'
 import { z } from 'zod'
 
-export const documentBaseSchema = z.object({
+export const documentBaseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<DocumentBase>, "passthrough"> = z.object({
   get DocumentTypeToCreate() {
     return documentToCreateSchema
       .default('Auto')

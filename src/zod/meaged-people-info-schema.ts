@@ -4,7 +4,7 @@ import { gender2Schema } from './gender2-schema.ts'
 import { relationsSchema } from './relations-schema.ts'
 import { z } from 'zod'
 
-export const meagedPeopleInfoSchema = z.object({
+export const meagedPeopleInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<MeagedPeopleInfo>, "passthrough"> = z.object({
   get RelationType() {
     return relationsSchema
   },

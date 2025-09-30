@@ -5,7 +5,7 @@ import { z } from 'zod'
 /**
  * @description Get transaction info request
  */
-export const transactionInfoRequestSchema = z
+export const transactionInfoRequestSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<TransactionInfoRequest>, "passthrough"> = z
   .object({
     TerminalNumber: z.int().describe('Terminal Number for authentication'),
     UserName: z.string().min(1).describe('API Name for authentication'),

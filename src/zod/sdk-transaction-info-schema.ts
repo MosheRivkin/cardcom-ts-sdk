@@ -2,7 +2,7 @@ import type { SdkTransactionInfo } from '../types/SdkTransactionInfo.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const sdkTransactionInfoSchema = z.object({
+export const sdkTransactionInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<SdkTransactionInfo>, "passthrough"> = z.object({
   Amount: z.string().min(1).describe('Tap transaction total sum'),
   Type: z.int().describe('Tap transaction type: 1 - Charge / 51 - Refund'),
   CreditType: z.int().describe('Tap transaction credit type: 1 - Single payment / 6 - Credit payments / 8 - Regular payments'),

@@ -1,4 +1,4 @@
-export const cardInfo = {
+export const cardInfo: { readonly Israeli: "Israeli"; readonly NonIsraeli: "NonIsraeli"; readonly FuelCard: "FuelCard"; readonly ImmediateChargeCard: "ImmediateChargeCard"; readonly GiftCard: "GiftCard"; } = {
   Israeli: 'Israeli',
   NonIsraeli: 'NonIsraeli',
   FuelCard: 'FuelCard',

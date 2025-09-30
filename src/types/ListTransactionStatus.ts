@@ -1,4 +1,4 @@
-export const listTransactionStatus = {
+export const listTransactionStatus: { readonly Success: "Success"; readonly All: "All"; readonly Failure: "Failure"; } = {
   Success: 'Success',
   All: 'All',
   Failure: 'Failure',

@@ -1,4 +1,4 @@
-export const humanIDTypes = {
+export const humanIDTypes: { readonly IDNumber: "IDNumber"; readonly Passport: "Passport"; } = {
   IDNumber: 'IDNumber',
   Passport: 'Passport',
 } as const

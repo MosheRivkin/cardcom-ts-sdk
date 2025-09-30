@@ -1,4 +1,4 @@
-export const typeOfRecruitment = {
+export const typeOfRecruitment: { readonly Independent: "Independent"; readonly Telephone: "Telephone"; readonly UsingARemoteRepresentative: "UsingARemoteRepresentative"; } = {
   Independent: 'Independent',
   Telephone: 'Telephone',
   UsingARemoteRepresentative: 'UsingARemoteRepresentative',

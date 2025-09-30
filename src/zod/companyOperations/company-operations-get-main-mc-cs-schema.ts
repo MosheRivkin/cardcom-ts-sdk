@@ -8,7 +8,7 @@ import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { mccdBsMainSchema } from '../mccd-bs-main-schema.ts'
 import { z } from 'zod'
 
-export const companyOperationsGetMainMcCsQueryParamsSchema = z.object({
+export const companyOperationsGetMainMcCsQueryParamsSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CompanyOperationsGetMainMCCsQueryParams>, "passthrough"> = z.object({
   SupplierUserName: z.string().nullable(),
   secret: z.string().nullable(),
 }) as unknown as ToZod<CompanyOperationsGetMainMCCsQueryParams>
@@ -16,12 +16,12 @@ export const companyOperationsGetMainMcCsQueryParamsSchema = z.object({
 /**
  * @description successful request
  */
-export const companyOperationsGetMainMcCs200Schema = z.array(mccdBsMainSchema) as unknown as ToZod<CompanyOperationsGetMainMCCs200>
+export const companyOperationsGetMainMcCs200Schema: z.ZodArray<z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").MCCDBsMAIN>, "passthrough">> = z.array(mccdBsMainSchema) as unknown as ToZod<CompanyOperationsGetMainMCCs200>
 
 /**
  * @description Invalid username
  */
-export const companyOperationsGetMainMcCs401Schema = z.string() as unknown as ToZod<CompanyOperationsGetMainMCCs401>
+export const companyOperationsGetMainMcCs401Schema: z.ZodString = z.string() as unknown as ToZod<CompanyOperationsGetMainMCCs401>
 
-export const companyOperationsGetMainMcCsQueryResponseSchema =
+export const companyOperationsGetMainMcCsQueryResponseSchema: z.ZodArray<z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").MCCDBsMAIN>, "passthrough">> =
   companyOperationsGetMainMcCs200Schema as unknown as ToZod<CompanyOperationsGetMainMCCsQueryResponse>

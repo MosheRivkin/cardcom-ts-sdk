@@ -9,8 +9,8 @@ import type {
 import type { RequestConfig, ResponseErrorConfig } from '@kubb/plugin-client/clients/axios'
 import { companyOperationsGetMainMcCsQueryResponseSchema } from '../../zod/companyOperations/company-operations-get-main-mc-cs-schema.ts'
 
-function getCompanyOperationsGetMainMcCsUrl() {
-  const res = { method: 'GET', url: `https://secure.cardcom.solutions/api/v11/CompanyOperations/GetMainMCCs` as const }
+function getCompanyOperationsGetMainMcCsUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/CompanyOperations/GetMainMCCs"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/CompanyOperations/GetMainMCCs"; } = { method: 'GET', url: `https://secure.cardcom.solutions/api/v11/CompanyOperations/GetMainMCCs` as const }
   return res
 }
 
@@ -22,10 +22,10 @@ function getCompanyOperationsGetMainMcCsUrl() {
 export async function companyOperationsGetMainMcCs(
   { params }: { params: CompanyOperationsGetMainMCCsQueryParams },
   config: Partial<RequestConfig> & { client?: typeof fetch } = {},
-) {
+): Promise<{ MCC_Code_MainClassification?: number | undefined; MCC_Description_MainClassification?: string | null | undefined; }[]> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const res = await request<CompanyOperationsGetMainMCCsQueryResponse, ResponseErrorConfig<CompanyOperationsGetMainMCCs401>, unknown>({
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CompanyOperationsGetMainMCCs200> = await request<CompanyOperationsGetMainMCCsQueryResponse, ResponseErrorConfig<CompanyOperationsGetMainMCCs401>, unknown>({
     method: 'GET',
     url: getCompanyOperationsGetMainMcCsUrl().url.toString(),
     params,

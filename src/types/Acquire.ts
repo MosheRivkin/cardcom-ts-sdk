@@ -1,4 +1,4 @@
-export const acquire = {
+export const acquire: { readonly Unknown: "Unknown"; readonly Isracard: "Isracard"; readonly CAL: "CAL"; readonly Diners: "Diners"; readonly AmericanExpress: "AmericanExpress"; readonly Laumicard: "Laumicard"; readonly CardCom: "CardCom"; readonly PayPal: "PayPal"; readonly Upay: "Upay"; readonly PayMe: "PayMe"; } = {
   Unknown: 'Unknown',
   Isracard: 'Isracard',
   CAL: 'CAL',

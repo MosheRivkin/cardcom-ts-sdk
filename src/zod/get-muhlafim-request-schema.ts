@@ -2,7 +2,7 @@ import type { GetMuhlafimRequest } from '../types/GetMuhlafimRequest.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const getMuhlafimRequestSchema = z.object({
+export const getMuhlafimRequestSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<GetMuhlafimRequest>, "passthrough"> = z.object({
   SupplierUserName: z.string().min(1).describe('Supplier Username'),
   Secret: z.string().min(1).describe('Secret Key or Password'),
   DateFrom: z.date().min(1).describe('Start Date'),

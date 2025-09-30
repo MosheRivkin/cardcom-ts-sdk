@@ -16,7 +16,7 @@ import { companyOperationsNewCompany } from './company-operations-new-company.ts
 import { companyOperationsReOpenCompany } from './company-operations-re-open-company.ts'
 import { companyOperationsValidateCompanyCreation } from './company-operations-validate-company-creation.ts'
 
-export function companyOperations() {
+export function companyOperations(): { companyOperationsGetCompanyStatus: typeof companyOperationsGetCompanyStatus; companyOperationsAddDocumentToCompany: typeof companyOperationsAddDocumentToCompany; companyOperationsValidateCompanyCreation: typeof companyOperationsValidateCompanyCreation; companyOperationsNewCompany: typeof companyOperationsNewCompany; companyOperationsCloseCompany: typeof companyOperationsCloseCompany; companyOperationsReOpenCompany: typeof companyOperationsReOpenCompany; companyOperationsGetCities: typeof companyOperationsGetCities; companyOperationsGetStreets: typeof companyOperationsGetStreets; companyOperationsGetCountries: typeof companyOperationsGetCountries; companyOperationsGetBanks: typeof companyOperationsGetBanks; companyOperationsGetBanksBranches: typeof companyOperationsGetBanksBranches; companyOperationsGetMainMcCs: typeof companyOperationsGetMainMcCs; companyOperationsGetSubMcCs: typeof companyOperationsGetSubMcCs; companyOperationsMeagedAddCompany: typeof companyOperationsMeagedAddCompany; companyOperationsMeagedGetCompanyInfo: typeof companyOperationsMeagedGetCompanyInfo; } {
   return {
     companyOperationsGetCompanyStatus,
     companyOperationsAddDocumentToCompany,

@@ -1,4 +1,4 @@
-export const buttonLocale = {
+export const buttonLocale: { readonly Arabic: "Arabic"; readonly Bulgarian: "Bulgarian"; readonly Catalan: "Catalan"; readonly Chinese: "Chinese"; readonly Croatian: "Croatian"; readonly Czech: "Czech"; readonly Danish: "Danish"; readonly Dutch: "Dutch"; readonly English: "English"; readonly Estonian: "Estonian"; readonly Finnish: "Finnish"; readonly French: "French"; readonly German: "German"; readonly Greek: "Greek"; readonly Indonesian: "Indonesian"; readonly Italian: "Italian"; readonly Japanese: "Japanese"; readonly Korean: "Korean"; readonly Malay: "Malay"; readonly Norwegian: "Norwegian"; readonly Polish: "Polish"; readonly Portuguese: "Portuguese"; readonly Russian: "Russian"; readonly Serbian: "Serbian"; readonly Slovak: "Slovak"; readonly Slovenian: "Slovenian"; readonly Spanish: "Spanish"; readonly Swedish: "Swedish"; readonly Thai: "Thai"; readonly Turkish: "Turkish"; readonly Ukrainian: "Ukrainian"; } = {
   Arabic: 'Arabic',
   Bulgarian: 'Bulgarian',
   Catalan: 'Catalan',

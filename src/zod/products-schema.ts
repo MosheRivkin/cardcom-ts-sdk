@@ -5,7 +5,7 @@ import { z } from 'zod'
 /**
  * @description Products
  */
-export const productsSchema = z
+export const productsSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<Products>, "passthrough"> = z
   .object({
     ProductID: z.string().max(50).describe("Product ID , exemple 'AVG-BB-10;").nullable().nullish(),
     Description: z.string().min(1).max(250).describe('product description'),

@@ -1,4 +1,4 @@
-export const documentType = {
+export const documentType: { readonly Error: "Error"; readonly TaxInvoiceAndReceipt: "TaxInvoiceAndReceipt"; readonly TaxInvoiceAndReceiptRefund: "TaxInvoiceAndReceiptRefund"; readonly Receipt: "Receipt"; readonly ReceiptRefund: "ReceiptRefund"; readonly Quote: "Quote"; readonly Order: "Order"; readonly SiteCustomerOrder: "SiteCustomerOrder"; readonly SiteCustomerOrderRefund: "SiteCustomerOrderRefund"; readonly DeliveryNote: "DeliveryNote"; readonly DeliveryNoteRefund: "DeliveryNoteRefund"; readonly ProformaInvoice: "ProformaInvoice"; readonly DemandForPayment: "DemandForPayment"; readonly DemandForPaymentRefund: "DemandForPaymentRefund"; readonly TaxInvoice: "TaxInvoice"; readonly TaxInvoiceRefund: "TaxInvoiceRefund"; readonly ReceiptForTaxInvoice: "ReceiptForTaxInvoice"; readonly DonationReceipt: "DonationReceipt"; readonly DonationReceiptRefund: "DonationReceiptRefund"; readonly ReceiptForTaxInvoiceRefund: "ReceiptForTaxInvoiceRefund"; } = {
   Error: 'Error',
   TaxInvoiceAndReceipt: 'TaxInvoiceAndReceipt',
   TaxInvoiceAndReceiptRefund: 'TaxInvoiceAndReceiptRefund',

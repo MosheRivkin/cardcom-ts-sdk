@@ -2,7 +2,7 @@ import type { ExtShvaParams } from '../types/ExtShvaParams.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const extShvaParamsSchema = z.object({
+export const extShvaParamsSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<ExtShvaParams>, "passthrough"> = z.object({
   HaveRecipient: z.boolean().optional(),
   Status1: z.int().optional(),
   CardNumber5: z.string().nullable().nullish(),

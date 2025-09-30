@@ -13,22 +13,22 @@ import { processTransactionResponseSchema } from '../process-transaction-respons
 /**
  * @description Successful request
  */
-export const tapTransactionsGetDevices200Schema = processTransactionResponseSchema as unknown as ToZod<TapTransactionsGetDevices200>
+export const tapTransactionsGetDevices200Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ProcessTransactionResponse>, "passthrough"> = processTransactionResponseSchema as unknown as ToZod<TapTransactionsGetDevices200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const tapTransactionsGetDevices400Schema = errorInfoSchema.describe(
+export const tapTransactionsGetDevices400Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<TapTransactionsGetDevices400>
 
 /**
  * @description Invalid username
  */
-export const tapTransactionsGetDevices401Schema = errorInfoSchema.describe(
+export const tapTransactionsGetDevices401Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<TapTransactionsGetDevices401>
 
-export const tapTransactionsGetDevicesMutationRequestSchema = getDevicesRequestSchema.nullable() as unknown as ToZod<TapTransactionsGetDevicesMutationRequest>
+export const tapTransactionsGetDevicesMutationRequestSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodNullable<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").GetDevicesRequest>, "passthrough">> = getDevicesRequestSchema.nullable() as unknown as ToZod<TapTransactionsGetDevicesMutationRequest>
 
-export const tapTransactionsGetDevicesMutationResponseSchema = tapTransactionsGetDevices200Schema as unknown as ToZod<TapTransactionsGetDevicesMutationResponse>
+export const tapTransactionsGetDevicesMutationResponseSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ProcessTransactionResponse>, "passthrough"> = tapTransactionsGetDevices200Schema as unknown as ToZod<TapTransactionsGetDevicesMutationResponse>

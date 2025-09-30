@@ -8,7 +8,7 @@ import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { dataGovCityCodesSchema } from '../data-gov-city-codes-schema.ts'
 import { z } from 'zod'
 
-export const companyOperationsGetCitiesQueryParamsSchema = z.object({
+export const companyOperationsGetCitiesQueryParamsSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CompanyOperationsGetCitiesQueryParams>, "passthrough"> = z.object({
   SupplierUserName: z.string().nullable(),
   secret: z.string().nullable(),
   startwith: z.string().default('').nullable().nullish(),
@@ -17,11 +17,11 @@ export const companyOperationsGetCitiesQueryParamsSchema = z.object({
 /**
  * @description successful request
  */
-export const companyOperationsGetCities200Schema = z.array(dataGovCityCodesSchema) as unknown as ToZod<CompanyOperationsGetCities200>
+export const companyOperationsGetCities200Schema: z.ZodArray<z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").DataGovCityCodes>, "passthrough">> = z.array(dataGovCityCodesSchema) as unknown as ToZod<CompanyOperationsGetCities200>
 
 /**
  * @description Invalid username
  */
-export const companyOperationsGetCities401Schema = z.string() as unknown as ToZod<CompanyOperationsGetCities401>
+export const companyOperationsGetCities401Schema: z.ZodString = z.string() as unknown as ToZod<CompanyOperationsGetCities401>
 
-export const companyOperationsGetCitiesQueryResponseSchema = companyOperationsGetCities200Schema as unknown as ToZod<CompanyOperationsGetCitiesQueryResponse>
+export const companyOperationsGetCitiesQueryResponseSchema: z.ZodArray<z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").DataGovCityCodes>, "passthrough">> = companyOperationsGetCities200Schema as unknown as ToZod<CompanyOperationsGetCitiesQueryResponse>

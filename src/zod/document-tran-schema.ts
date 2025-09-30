@@ -3,7 +3,7 @@ import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { documentBaseSchema } from './document-base-schema.ts'
 import { z } from 'zod'
 
-export const documentTranSchema = documentBaseSchema.and(
+export const documentTranSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<DocumentTran>, "passthrough"> = documentBaseSchema.and(
   z.object({
     ManualNumber: z.string().describe('Manual numbering of the document. Special permission must be requested to use this parameter.').nullable().nullish(),
     DocumentDateDDMMYYYY: z.string().describe('Document production date.').nullable().nullish(),

@@ -5,7 +5,7 @@ import { buttonLocaleSchema } from './button-locale-schema.ts'
 import { buttonTypeSchema } from './button-type-schema.ts'
 import { z } from 'zod'
 
-export const googlePayBtnDesignSchema = z.object({
+export const googlePayBtnDesignSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<GooglePayBtnDesign>, "passthrough"> = z.object({
   get ButtonColor() {
     return buttonColorSchema.describe('GPay button color').optional()
   },

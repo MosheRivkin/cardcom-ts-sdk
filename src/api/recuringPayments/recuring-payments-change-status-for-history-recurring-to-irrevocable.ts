@@ -13,8 +13,8 @@ import {
   recuringPaymentsChangeStatusForHistoryRecurringToIrrevocableMutationRequestSchema,
 } from '../../zod/recuringPayments/recuring-payments-change-status-for-history-recurring-to-irrevocable-schema.ts'
 
-function getRecuringPaymentsChangeStatusForHistoryRecurringToIrrevocableUrl() {
-  const res = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/RecuringPayments/ChangeStatusForHistoryRecurringToIrrevocable` as const }
+function getRecuringPaymentsChangeStatusForHistoryRecurringToIrrevocableUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/RecuringPayments/ChangeStatusForHistoryRecurringToIrrevocable"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/RecuringPayments/ChangeStatusForHistoryRecurringToIrrevocable"; } = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/RecuringPayments/ChangeStatusForHistoryRecurringToIrrevocable` as const }
   return res
 }
 
@@ -26,11 +26,11 @@ function getRecuringPaymentsChangeStatusForHistoryRecurringToIrrevocableUrl() {
 export async function recuringPaymentsChangeStatusForHistoryRecurringToIrrevocable(
   { data }: { data?: RecuringPaymentsChangeStatusForHistoryRecurringToIrrevocableMutationRequest },
   config: Partial<RequestConfig<RecuringPaymentsChangeStatusForHistoryRecurringToIrrevocableMutationRequest>> & { client?: typeof fetch } = {},
-) {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData = recuringPaymentsChangeStatusForHistoryRecurringToIrrevocableMutationRequestSchema.parse(data)
-  const res = await request<
+  const requestData: { ApiUserName?: string | null | undefined; ApiPassword?: string | null | undefined; RowID?: number | null | undefined; ChangeTo?: import("/home/m/dev/git/cardcom-ts-sdk/src/index").RecurringStatus | undefined; } | null = recuringPaymentsChangeStatusForHistoryRecurringToIrrevocableMutationRequestSchema.parse(data)
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ExtIsBankNumberValidRsp> = await request<
     RecuringPaymentsChangeStatusForHistoryRecurringToIrrevocableMutationResponse,
     ResponseErrorConfig<RecuringPaymentsChangeStatusForHistoryRecurringToIrrevocable400 | RecuringPaymentsChangeStatusForHistoryRecurringToIrrevocable401>,
     RecuringPaymentsChangeStatusForHistoryRecurringToIrrevocableMutationRequest

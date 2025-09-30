@@ -8,7 +8,7 @@ import { documentsCrossDocument } from './documents-cross-document.ts'
 import { documentsGetReport } from './documents-get-report.ts'
 import { documentsSendAllDocumentsToEmail } from './documents-send-all-documents-to-email.ts'
 
-export function documents() {
+export function documents(): { documentsCreateDocument: typeof documentsCreateDocument; documentsCancelDoc: typeof documentsCancelDoc; documentsSendAllDocumentsToEmail: typeof documentsSendAllDocumentsToEmail; documentsGetReport: typeof documentsGetReport; documentsCrossDocument: typeof documentsCrossDocument; documentsCreateTaxInvoice: typeof documentsCreateTaxInvoice; documentsCreateDocumentUrl: typeof documentsCreateDocumentUrl; } {
   return {
     documentsCreateDocument,
     documentsCancelDoc,

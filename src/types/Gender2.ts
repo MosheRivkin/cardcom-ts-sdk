@@ -1,4 +1,4 @@
-export const gender2Enum = {
+export const gender2Enum: { readonly Unknown: 0; readonly male: 1; readonly female: 2; } = {
   Unknown: 0,
   male: 1,
   female: 2,

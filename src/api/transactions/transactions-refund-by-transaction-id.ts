@@ -13,8 +13,8 @@ import {
   transactionsRefundByTransactionIdMutationRequestSchema,
 } from '../../zod/transactions/transactions-refund-by-transaction-id-schema.ts'
 
-function getTransactionsRefundByTransactionIdUrl() {
-  const res = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId` as const }
+function getTransactionsRefundByTransactionIdUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId"; } = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Transactions/RefundByTransactionId` as const }
   return res
 }
 
@@ -26,11 +26,11 @@ function getTransactionsRefundByTransactionIdUrl() {
 export async function transactionsRefundByTransactionId(
   { data }: { data?: TransactionsRefundByTransactionIdMutationRequest },
   config: Partial<RequestConfig<TransactionsRefundByTransactionIdMutationRequest>> & { client?: typeof fetch } = {},
-) {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; NewTranzactionId?: number | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData = transactionsRefundByTransactionIdMutationRequestSchema.parse(data)
-  const res = await request<
+  const requestData: { ApiName: string; ApiPassword: string; TransactionId: number; ExternalDealId?: string | null | undefined; ExternalMerchantId?: string | null | undefined; PartialSum?: number | null | undefined; CancelOnly?: boolean | null | undefined; SapakMutav?: string | null | undefined; AllowMultipleRefunds?: boolean | null | undefined; CustomFields?: { Id?: number | undefined; Value?: string | undefined; }[] | null | undefined; } | null = transactionsRefundByTransactionIdMutationRequestSchema.parse(data)
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").RefundByTransactionIdResp> = await request<
     TransactionsRefundByTransactionIdMutationResponse,
     ResponseErrorConfig<TransactionsRefundByTransactionId400 | TransactionsRefundByTransactionId401>,
     TransactionsRefundByTransactionIdMutationRequest

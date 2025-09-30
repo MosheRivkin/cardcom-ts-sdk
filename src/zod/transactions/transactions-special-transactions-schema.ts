@@ -13,24 +13,24 @@ import { specialTransactionsRespSchema } from '../special-transactions-resp-sche
 /**
  * @description successful request, see \'ResponseCode\' if request succeeded
  */
-export const transactionsSpecialTransactions200Schema = specialTransactionsRespSchema as unknown as ToZod<TransactionsSpecialTransactions200>
+export const transactionsSpecialTransactions200Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").SpecialTransactionsResp>, "passthrough"> = specialTransactionsRespSchema as unknown as ToZod<TransactionsSpecialTransactions200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const transactionsSpecialTransactions400Schema = errorInfoSchema.describe(
+export const transactionsSpecialTransactions400Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<TransactionsSpecialTransactions400>
 
 /**
  * @description Invalid username
  */
-export const transactionsSpecialTransactions401Schema = errorInfoSchema.describe(
+export const transactionsSpecialTransactions401Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<TransactionsSpecialTransactions401>
 
-export const transactionsSpecialTransactionsMutationRequestSchema =
+export const transactionsSpecialTransactionsMutationRequestSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodNullable<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").SpecialTransactionsReq>, "passthrough">> =
   specialTransactionsReqSchema.nullable() as unknown as ToZod<TransactionsSpecialTransactionsMutationRequest>
 
-export const transactionsSpecialTransactionsMutationResponseSchema =
+export const transactionsSpecialTransactionsMutationResponseSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").SpecialTransactionsResp>, "passthrough"> =
   transactionsSpecialTransactions200Schema as unknown as ToZod<TransactionsSpecialTransactionsMutationResponse>

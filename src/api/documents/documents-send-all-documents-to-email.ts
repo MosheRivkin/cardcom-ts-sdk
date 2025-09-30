@@ -13,8 +13,8 @@ import {
   documentsSendAllDocumentsToEmailMutationRequestSchema,
 } from '../../zod/documents/documents-send-all-documents-to-email-schema.ts'
 
-function getDocumentsSendAllDocumentsToEmailUrl() {
-  const res = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Documents/SendAllDocumentsToEmail` as const }
+function getDocumentsSendAllDocumentsToEmailUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/Documents/SendAllDocumentsToEmail"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/Documents/SendAllDocumentsToEmail"; } = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Documents/SendAllDocumentsToEmail` as const }
   return res
 }
 
@@ -26,11 +26,11 @@ function getDocumentsSendAllDocumentsToEmailUrl() {
 export async function documentsSendAllDocumentsToEmail(
   { data }: { data?: DocumentsSendAllDocumentsToEmailMutationRequest },
   config: Partial<RequestConfig<DocumentsSendAllDocumentsToEmailMutationRequest>> & { client?: typeof fetch } = {},
-) {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData = documentsSendAllDocumentsToEmailMutationRequestSchema.parse(data)
-  const res = await request<
+  const requestData: { ApiName: string; ApiPassword: string; EmailTo: string; FromDateYYYYMMDD: string; ToDateYYYYMMDD: string; SendEmptyEmail?: boolean | null | undefined; ForceOriginal?: boolean | null | undefined; DocumentType?: number | null | undefined; } | null = documentsSendAllDocumentsToEmailMutationRequestSchema.parse(data)
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").SendAllDocumentsToEmailResponse> = await request<
     DocumentsSendAllDocumentsToEmailMutationResponse,
     ResponseErrorConfig<DocumentsSendAllDocumentsToEmail400 | DocumentsSendAllDocumentsToEmail401>,
     DocumentsSendAllDocumentsToEmailMutationRequest

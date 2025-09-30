@@ -2,4 +2,4 @@ import type { ThreeDSecureState } from '../types/ThreeDSecureState.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const threeDSecureStateSchema = z.enum(['Auto', 'Enabled', 'Disabled']) as unknown as ToZod<ThreeDSecureState>
+export const threeDSecureStateSchema: z.ZodType<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ThreeDSecureStateEnum, unknown, z.core.$ZodTypeInternals<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ThreeDSecureStateEnum, unknown>> = z.enum(['Auto', 'Enabled', 'Disabled']) as unknown as ToZod<ThreeDSecureState>

@@ -2,7 +2,7 @@ import type { CountriesISO } from '../types/CountriesISO.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const countriesIsoSchema = z.object({
+export const countriesIsoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CountriesISO>, "passthrough"> = z.object({
   CountryCode: z.string().nullable().nullish(),
   Name: z.string().nullable().nullish(),
   NameHeb: z.string().nullable().nullish(),

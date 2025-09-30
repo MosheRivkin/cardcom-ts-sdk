@@ -1,4 +1,4 @@
-export const citizenship = {
+export const citizenship: { readonly Unknown: "Unknown"; readonly Israel: "Israel"; readonly Expatriate: "Expatriate"; readonly ResidentArea: "ResidentArea"; } = {
   Unknown: 'Unknown',
   Israel: 'Israel',
   Expatriate: 'Expatriate',

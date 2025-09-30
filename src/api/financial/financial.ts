@@ -6,7 +6,7 @@ import { financialCreditCardTransactions } from './financial-credit-card-transac
 import { financialFinancialTransactions } from './financial-financial-transactions.ts'
 import { financialGetSlikaInvoices } from './financial-get-slika-invoices.ts'
 
-export function financial() {
+export function financial(): { financialCreditCardTransactions: typeof financialCreditCardTransactions; financialCreditCardTransactionsHalted: typeof financialCreditCardTransactionsHalted; financialFinancialTransactions: typeof financialFinancialTransactions; financialBankDeposites: typeof financialBankDeposites; financialGetSlikaInvoices: typeof financialGetSlikaInvoices; } {
   return {
     financialCreditCardTransactions,
     financialCreditCardTransactionsHalted,

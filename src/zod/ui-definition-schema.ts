@@ -7,7 +7,7 @@ import { z } from 'zod'
 /**
  * @description UI Definition for the created page
  */
-export const uiDefinitionSchema = z
+export const uiDefinitionSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<UIDefinition>, "passthrough"> = z
   .object({
     IsHideCardOwnerName: z.boolean().default(false).describe('Hide card Owner name').nullable().nullish(),
     CardOwnerNameValue: z.string().max(50).default('').describe('Fill the value of CardOwnerName input box').nullable().nullish(),

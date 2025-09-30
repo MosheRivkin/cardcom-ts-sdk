@@ -1,4 +1,4 @@
-export const paymentType = {
+export const paymentType: { readonly Unknown: "Unknown"; readonly Standard: "Standard"; readonly SpecialCredits: "SpecialCredits"; readonly ImmediateCharge: "ImmediateCharge"; readonly CreditClub: "CreditClub"; readonly SuperCredit: "SuperCredit"; readonly InstallmentCredit: "InstallmentCredit"; readonly Payments: "Payments"; readonly ClubPatments: "ClubPatments"; } = {
   Unknown: 'Unknown',
   Standard: 'Standard',
   SpecialCredits: 'SpecialCredits',

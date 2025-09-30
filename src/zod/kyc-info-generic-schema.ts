@@ -6,7 +6,7 @@ import { salePlatformSchema } from './sale-platform-schema.ts'
 import { typeOfRecruitmentSchema } from './type-of-recruitment-schema.ts'
 import { z } from 'zod'
 
-export const kycInfoGenericSchema = z.object({
+export const kycInfoGenericSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<KycInfoGeneric>, "passthrough"> = z.object({
   CountriesTargetedMarket: z.string().max(250).describe('טקסט חופשי עד 250 תווים, עבור איזה מדינות המוצר מיועד').nullable().nullish(),
   NamesOfRelatedBusinesses: z
     .string()

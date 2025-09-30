@@ -13,8 +13,8 @@ import {
   tapTransactionsGetTransactionsMutationRequestSchema,
 } from '../../zod/tapTransactions/tap-transactions-get-transactions-schema.ts'
 
-function getTapTransactionsGetTransactionsUrl() {
-  const res = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/TapTransactions/GetTransactions` as const }
+function getTapTransactionsGetTransactionsUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/TapTransactions/GetTransactions"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/TapTransactions/GetTransactions"; } = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/TapTransactions/GetTransactions` as const }
   return res
 }
 
@@ -26,11 +26,11 @@ function getTapTransactionsGetTransactionsUrl() {
 export async function tapTransactionsGetTransactions(
   { data }: { data?: TapTransactionsGetTransactionsMutationRequest },
   config: Partial<RequestConfig<TapTransactionsGetTransactionsMutationRequest>> & { client?: typeof fetch } = {},
-) {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; DealNumber?: number | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData = tapTransactionsGetTransactionsMutationRequestSchema.parse(data)
-  const res = await request<
+  const requestData: { ApiName: string; ApiPassword: string; TerminalNumber: number; FromDate: string; ToDate: string; } | null = tapTransactionsGetTransactionsMutationRequestSchema.parse(data)
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ProcessTransactionResponse> = await request<
     TapTransactionsGetTransactionsMutationResponse,
     ResponseErrorConfig<TapTransactionsGetTransactions400 | TapTransactionsGetTransactions401>,
     TapTransactionsGetTransactionsMutationRequest

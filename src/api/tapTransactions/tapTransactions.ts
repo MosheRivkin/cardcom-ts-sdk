@@ -5,6 +5,6 @@ import { tapTransactionsGetTransactions } from './tap-transactions-get-transacti
 import { tapTransactionsPrepareDevice } from './tap-transactions-prepare-device.ts'
 import { tapTransactionsProcessTransaction } from './tap-transactions-process-transaction.ts'
 
-export function tapTransactions() {
+export function tapTransactions(): { tapTransactionsPrepareDevice: typeof tapTransactionsPrepareDevice; tapTransactionsProcessTransaction: typeof tapTransactionsProcessTransaction; tapTransactionsGetTransactions: typeof tapTransactionsGetTransactions; tapTransactionsGetDevices: typeof tapTransactionsGetDevices; } {
   return { tapTransactionsPrepareDevice, tapTransactionsProcessTransaction, tapTransactionsGetTransactions, tapTransactionsGetDevices }
 }

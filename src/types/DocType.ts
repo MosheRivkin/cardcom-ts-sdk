@@ -1,4 +1,4 @@
-export const docType = {
+export const docType: { readonly Id: "Id"; readonly Passport: "Passport"; readonly CertificateOfIncorporation: "CertificateOfIncorporation"; readonly BankConfirmationOrPhotocopyOfCheck: "BankConfirmationOrPhotocopyOfCheck"; readonly AttorneysApprovalForAGovernmentCompany: "AttorneysApprovalForAGovernmentCompany"; readonly AuthorizedAsAuthorizedToSign: "AuthorizedAsAuthorizedToSign"; readonly AttorneysProtocolAuthorizedToSign: "AttorneysProtocolAuthorizedToSign"; readonly BookkeepingAuthorization: "BookkeepingAuthorization"; readonly AnotherCertificateForAForeignResident: "AnotherCertificateForAForeignResident"; readonly LicenseWorkPermitCertificateForABusiness: "LicenseWorkPermitCertificateForABusiness"; readonly DeclarationOfBeneficiaries: "DeclarationOfBeneficiaries"; readonly ADocumentIndicatingTheCorrectAddressOfTheCompany: "ADocumentIndicatingTheCorrectAddressOfTheCompany"; readonly FaceToFaceRecognitionVideoFile: "FaceToFaceRecognitionVideoFile"; } = {
   Id: 'Id',
   Passport: 'Passport',
   CertificateOfIncorporation: 'CertificateOfIncorporation',

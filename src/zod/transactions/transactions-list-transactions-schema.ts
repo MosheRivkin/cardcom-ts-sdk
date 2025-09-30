@@ -14,24 +14,24 @@ import { z } from 'zod'
 /**
  * @description successful request
  */
-export const transactionsListTransactions200Schema = getTranzactionsRespSchema as unknown as ToZod<TransactionsListTransactions200>
+export const transactionsListTransactions200Schema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").GetTranzactionsResp>, "passthrough"> = getTranzactionsRespSchema as unknown as ToZod<TransactionsListTransactions200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const transactionsListTransactions400Schema = errorInfoSchema.describe(
+export const transactionsListTransactions400Schema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<TransactionsListTransactions400>
 
 /**
  * @description Invalid username
  */
-export const transactionsListTransactions401Schema = errorInfoSchema.describe(
+export const transactionsListTransactions401Schema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<TransactionsListTransactions401>
 
-export const transactionsListTransactionsMutationRequestSchema =
+export const transactionsListTransactionsMutationRequestSchema: z.ZodNullable<z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ListTransactionsReq>, "passthrough">> =
   listTransactionsReqSchema.nullable() as unknown as ToZod<TransactionsListTransactionsMutationRequest>
 
-export const transactionsListTransactionsMutationResponseSchema =
+export const transactionsListTransactionsMutationResponseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").GetTranzactionsResp>, "passthrough"> =
   transactionsListTransactions200Schema as unknown as ToZod<TransactionsListTransactionsMutationResponse>

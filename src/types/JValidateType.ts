@@ -1,4 +1,4 @@
-export const jValidateTypeEnum = {
+export const jValidateTypeEnum: { readonly J2: 2; readonly J5: 5; } = {
   J2: 2,
   J5: 5,
 } as const

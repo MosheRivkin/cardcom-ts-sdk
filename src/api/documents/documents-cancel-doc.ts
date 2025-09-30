@@ -10,8 +10,8 @@ import type {
 import type { RequestConfig, ResponseErrorConfig } from '@kubb/plugin-client/clients/axios'
 import { documentsCancelDocMutationResponseSchema, documentsCancelDocMutationRequestSchema } from '../../zod/documents/documents-cancel-doc-schema.ts'
 
-function getDocumentsCancelDocUrl() {
-  const res = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Documents/CancelDoc` as const }
+function getDocumentsCancelDocUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/Documents/CancelDoc"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/Documents/CancelDoc"; } = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Documents/CancelDoc` as const }
   return res
 }
 
@@ -23,11 +23,11 @@ function getDocumentsCancelDocUrl() {
 export async function documentsCancelDoc(
   { data }: { data?: DocumentsCancelDocMutationRequest },
   config: Partial<RequestConfig<DocumentsCancelDocMutationRequest>> & { client?: typeof fetch } = {},
-) {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; NewDocumentNumber?: number | null | undefined; NewDocumentType?: number | null | undefined; AccountID?: number | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData = documentsCancelDocMutationRequestSchema.parse(data)
-  const res = await request<
+  const requestData: { ApiName: string; ApiPassword: string; DocumentNumber: number; DocumentType: number; IsCancelEmailSend?: boolean | undefined; IsSendSMS?: boolean | undefined; IsCreditCardCancelOnly?: boolean | undefined; } | null = documentsCancelDocMutationRequestSchema.parse(data)
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CancelDocResponse> = await request<
     DocumentsCancelDocMutationResponse,
     ResponseErrorConfig<DocumentsCancelDoc400 | DocumentsCancelDoc401>,
     DocumentsCancelDocMutationRequest

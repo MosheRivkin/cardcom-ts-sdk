@@ -3,7 +3,7 @@ import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { jValidateTypeSchema } from './j-validate-type-schema.ts'
 import { z } from 'zod'
 
-export const advancedTranSchema = z.object({
+export const advancedTranSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<AdvancedTran>, "passthrough"> = z.object({
   ApiPassword: z.string().describe("Required only if 'IsRefund' is true").nullable().nullish(),
   IsRefund: z.boolean().describe("Is refund transaction , 'ApiPassword' is Required to use this option").optional(),
   ISOCoinName: z

@@ -1,4 +1,4 @@
-export const filterBy = {
+export const filterBy: { readonly CreateDate: "CreateDate"; readonly LastUpdateDate: "LastUpdateDate"; } = {
   CreateDate: 'CreateDate',
   LastUpdateDate: 'LastUpdateDate',
 } as const

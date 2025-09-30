@@ -1,4 +1,4 @@
-export const recurringStatus = {
+export const recurringStatus: { readonly DebtForTracking: "DebtForTracking"; readonly NoOtherPaymentMethod: "NoOtherPaymentMethod"; readonly BadDebt: "BadDebt"; } = {
   DebtForTracking: 'DebtForTracking',
   NoOtherPaymentMethod: 'NoOtherPaymentMethod',
   BadDebt: 'BadDebt',

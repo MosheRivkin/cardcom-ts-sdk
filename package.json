@@ -1,7 +1,22 @@
 {
   "name": "cardcom-ts-sdk",
-  "version": "1.0.2",
   "description": "Unofficial TypeScript wrapper for the Cardcom REST API, providing type safety, documentation, schema validation, and convenient fetching.",
+  "version": "1.0.3",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
   "keywords": [
     "cardcom",
     "typescript",
@@ -16,17 +31,21 @@
     "type": "git",
     "url": "https://github.com/mosherivkin/cardcom-ts-sdk.git"
   },
-  "module": "index.ts",
-  "type": "module",
+  "scripts": {
+    "build": "bunup",
+    "dev": "bunup --watch"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@kubb/plugin-zod": "^4.1.1",
+    "@types/bun": "latest",
+    "bunup": "^0.14.9",
+    "ts-morph": "^27.0.0"
   },
   "peerDependencies": {
     "typescript": "^5",
     "zod": "^4.0.17"
   },
   "dependencies": {
-    "@kubb/plugin-client": "^3.18.0",
-    "@kubb/plugin-zod": "^3.18.0"
+    "@kubb/plugin-client": "^3.18.0"
   }
 }

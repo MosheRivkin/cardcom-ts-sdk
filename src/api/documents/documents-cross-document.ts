@@ -13,8 +13,8 @@ import {
   documentsCrossDocumentMutationRequestSchema,
 } from '../../zod/documents/documents-cross-document-schema.ts'
 
-function getDocumentsCrossDocumentUrl() {
-  const res = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Documents/CrossDocument` as const }
+function getDocumentsCrossDocumentUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/Documents/CrossDocument"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/Documents/CrossDocument"; } = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Documents/CrossDocument` as const }
   return res
 }
 
@@ -26,11 +26,11 @@ function getDocumentsCrossDocumentUrl() {
 export async function documentsCrossDocument(
   { data }: { data?: DocumentsCrossDocumentMutationRequest },
   config: Partial<RequestConfig<DocumentsCrossDocumentMutationRequest>> & { client?: typeof fetch } = {},
-) {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData = documentsCrossDocumentMutationRequestSchema.parse(data)
-  const res = await request<
+  const requestData: { ApiName?: string | undefined; ApiPassword?: string | undefined; FromDocNumber?: number | undefined; FromDocType?: number | undefined; ToDocumentsList?: { DocNumber?: number | undefined; DocType?: number | undefined; PartialSumToCorss?: number | null | undefined; }[] | undefined; } | null = documentsCrossDocumentMutationRequestSchema.parse(data)
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CrossDocumentResponse> = await request<
     DocumentsCrossDocumentMutationResponse,
     ResponseErrorConfig<DocumentsCrossDocument400 | DocumentsCrossDocument401>,
     DocumentsCrossDocumentMutationRequest

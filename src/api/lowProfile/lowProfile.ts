@@ -3,6 +3,6 @@
 import { lowProfileCreate } from './low-profile-create.ts'
 import { lowProfileGetLpResult } from './low-profile-get-lp-result.ts'
 
-export function lowProfile() {
+export function lowProfile(): { lowProfileCreate: typeof lowProfileCreate; lowProfileGetLpResult: typeof lowProfileGetLpResult; } {
   return { lowProfileCreate, lowProfileGetLpResult }
 }

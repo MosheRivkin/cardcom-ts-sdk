@@ -2,7 +2,7 @@ import type { ActionCode } from '../types/ActionCode.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const actionCodeSchema = z.enum([
+export const actionCodeSchema: z.ZodType<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ActionCodeEnum, unknown, z.core.$ZodTypeInternals<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ActionCodeEnum, unknown>> = z.enum([
   'NoActionCode',
   'Purchase_1',
   'Return_6',

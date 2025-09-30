@@ -13,8 +13,8 @@ import {
   transactionsGetTransactionByExternalUniqTranMutationRequestSchema,
 } from '../../zod/transactions/transactions-get-transaction-by-external-uniq-tran-schema.ts'
 
-function getTransactionsGetTransactionByExternalUniqTranUrl() {
-  const res = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Transactions/GetTransactionByExternalUniqTran` as const }
+function getTransactionsGetTransactionByExternalUniqTranUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/Transactions/GetTransactionByExternalUniqTran"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/Transactions/GetTransactionByExternalUniqTran"; } = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/Transactions/GetTransactionByExternalUniqTran` as const }
   return res
 }
 
@@ -26,11 +26,11 @@ function getTransactionsGetTransactionByExternalUniqTranUrl() {
 export async function transactionsGetTransactionByExternalUniqTran(
   { data }: { data?: TransactionsGetTransactionByExternalUniqTranMutationRequest },
   config: Partial<RequestConfig<TransactionsGetTransactionByExternalUniqTranMutationRequest>> & { client?: typeof fetch } = {},
-) {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; TranzactionId?: number | undefined; TerminalNumber?: number | undefined; Amount?: number | undefined; CoinId?: number | undefined; CouponNumber?: string | null | undefined; CreateDate?: string | undefined; Last4CardDigits?: number | undefined; Last4CardDigitsString?: string | null | undefined; FirstCardDigits?: number | undefined; JParameter?: string | null | undefined; CardMonth?: number | undefined; CardYear?: number | undefined; ApprovalNumber?: string | null | undefined; FirstPaymentAmount?: number | undefined; ConstPaymentAmount?: number | undefined; NumberOfPayments?: number | undefined; CardInfo?: import("/home/m/dev/git/cardcom-ts-sdk/src/index").CardInfo | undefined; CardOwnerName?: string | null | undefined; CardOwnerPhone?: string | null | undefined; CardOwnerEmail?: string | null | undefined; CardOwnerIdentityNumber?: string | null | undefined; Token?: string | null | undefined; CardName?: string | null | undefined; SapakMutav?: string | null | undefined; Uid?: string | null | undefined; ConcentrationNumber?: string | null | undefined; DocumentNumber?: number | null | undefined; DocumentType?: (import("/home/m/dev/git/cardcom-ts-sdk/src/index").DocumentType | null) | undefined; Rrn?: string | null | undefined; Brand?: import("/home/m/dev/git/cardcom-ts-sdk/src/index").Brand | undefined; Acquire?: import("/home/m/dev/git/cardcom-ts-sdk/src/index").Acquire | undefined; Issuer?: import("/home/m/dev/git/cardcom-ts-sdk/src/index").Issuer | undefined; PaymentType?: import("/home/m/dev/git/cardcom-ts-sdk/src/index").PaymentType | undefined; CardNumberEntryMode?: import("/home/m/dev/git/cardcom-ts-sdk/src/index").CardNumberEntryMode | undefined; DealType?: import("/home/m/dev/git/cardcom-ts-sdk/src/index").DealType | undefined; IsRefund?: boolean | undefined; DocumentUrl?: string | null | undefined; CustomFields?: { Id?: number | undefined; Value?: string | undefined; }[] | null | undefined; IsAbroadCard?: boolean | undefined; IssuerAuthCodeDescription?: string | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData = transactionsGetTransactionByExternalUniqTranMutationRequestSchema.parse(data)
-  const res = await request<
+  const requestData: { TerminalNumber: number; ApiName: string; ExternalUniqTranId?: string | null | undefined; ExternalMerchantId?: string | null | undefined; } | null = transactionsGetTransactionByExternalUniqTranMutationRequestSchema.parse(data)
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").TransactionInfo> = await request<
     TransactionsGetTransactionByExternalUniqTranMutationResponse,
     ResponseErrorConfig<TransactionsGetTransactionByExternalUniqTran400 | TransactionsGetTransactionByExternalUniqTran401>,
     TransactionsGetTransactionByExternalUniqTranMutationRequest

@@ -1,4 +1,4 @@
-export const salePlatform = {
+export const salePlatform: { readonly PhysicalSale: "PhysicalSale"; readonly Phone: "Phone"; readonly Web: "Web"; readonly LandingPage: "LandingPage"; } = {
   PhysicalSale: 'PhysicalSale',
   Phone: 'Phone',
   Web: 'Web',

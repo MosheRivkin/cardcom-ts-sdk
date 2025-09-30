@@ -5,7 +5,7 @@ import { linkedTransactionsTypeSchema } from './linked-transactions-type-schema.
 import { txnTypeSchema } from './txn-type-schema.ts'
 import { z } from 'zod'
 
-export const financialTransactionsSchema = z.object({
+export const financialTransactionsSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<FinancialTransactions>, "passthrough"> = z.object({
   CreateDate: z.date().optional(),
   FirstCardDigits: z.int().nullable().nullish(),
   Id: z.int().optional(),

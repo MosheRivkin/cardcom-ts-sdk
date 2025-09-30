@@ -13,25 +13,25 @@ import { errorInfoSchema } from '../error-info-schema.ts'
 /**
  * @description successful request
  */
-export const financialCreditCardTransactionsHalted200Schema =
+export const financialCreditCardTransactionsHalted200Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CreditCardTransactionsHaltedResp>, "passthrough"> =
   creditCardTransactionsHaltedRespSchema as unknown as ToZod<FinancialCreditCardTransactionsHalted200>
 
 /**
  * @description Invalid request , see \'Description\' in response for more information
  */
-export const financialCreditCardTransactionsHalted400Schema = errorInfoSchema.describe(
+export const financialCreditCardTransactionsHalted400Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<FinancialCreditCardTransactionsHalted400>
 
 /**
  * @description Invalid username
  */
-export const financialCreditCardTransactionsHalted401Schema = errorInfoSchema.describe(
+export const financialCreditCardTransactionsHalted401Schema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ErrorInfo>, "passthrough"> = errorInfoSchema.describe(
   'error information for non http status 200',
 ) as unknown as ToZod<FinancialCreditCardTransactionsHalted401>
 
-export const financialCreditCardTransactionsHaltedMutationRequestSchema =
+export const financialCreditCardTransactionsHaltedMutationRequestSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodNullable<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CreditCardTransactionsHaltedReq>, "passthrough">> =
   creditCardTransactionsHaltedReqSchema.nullable() as unknown as ToZod<FinancialCreditCardTransactionsHaltedMutationRequest>
 
-export const financialCreditCardTransactionsHaltedMutationResponseSchema =
+export const financialCreditCardTransactionsHaltedMutationResponseSchema: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/zod/index").ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CreditCardTransactionsHaltedResp>, "passthrough"> =
   financialCreditCardTransactionsHalted200Schema as unknown as ToZod<FinancialCreditCardTransactionsHaltedMutationResponse>

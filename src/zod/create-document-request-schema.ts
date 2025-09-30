@@ -6,7 +6,7 @@ import { rciExtCustomeSchema } from './rci-ext-custome-schema.ts'
 import { rciExtDealNumSchema } from './rci-ext-deal-num-schema.ts'
 import { z } from 'zod'
 
-export const createDocumentRequestSchema = z.object({
+export const createDocumentRequestSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CreateDocumentRequest>, "passthrough"> = z.object({
   ApiName: z.string().min(1).describe('Api Name for authentication'),
   ApiPassword: z.string().min(1).describe('Api password for authentication'),
   get Document() {

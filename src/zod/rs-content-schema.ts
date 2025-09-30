@@ -5,7 +5,7 @@ import { errorInfoSchema } from './error-info-schema.ts'
 import { httpStatusCodeSchema } from './http-status-code-schema.ts'
 import { z } from 'zod'
 
-export const rsContentSchema = errorInfoSchema.and(
+export const rsContentSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<RSContent>, "passthrough"> = errorInfoSchema.and(
   z.object({
     get DocumentsErrorResults() {
       return z.array(companyOperationsErrorSchema).nullable().nullish()

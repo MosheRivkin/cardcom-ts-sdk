@@ -11,7 +11,7 @@ import { issuerSchema } from './issuer-schema.ts'
 import { paymentTypeSchema } from './payment-type-schema.ts'
 import { z } from 'zod'
 
-export const transactionInfoSchema = z.object({
+export const transactionInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<TransactionInfo>, "passthrough"> = z.object({
   ResponseCode: z.int().describe('if equal zero then success , 700 and 701 success for J2 and J5 transaction').optional(),
   Description: z.string().describe('Description of the ResponseCode').nullable().nullish(),
   TranzactionId: z.int().describe('The Id of the Credit card Tranzacion').optional(),

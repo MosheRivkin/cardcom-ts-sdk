@@ -13,8 +13,8 @@ import {
   tapTransactionsGetDevicesMutationRequestSchema,
 } from '../../zod/tapTransactions/tap-transactions-get-devices-schema.ts'
 
-function getTapTransactionsGetDevicesUrl() {
-  const res = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/TapTransactions/GetDevices` as const }
+function getTapTransactionsGetDevicesUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/TapTransactions/GetDevices"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/TapTransactions/GetDevices"; } = { method: 'POST', url: `https://secure.cardcom.solutions/api/v11/TapTransactions/GetDevices` as const }
   return res
 }
 
@@ -26,11 +26,11 @@ function getTapTransactionsGetDevicesUrl() {
 export async function tapTransactionsGetDevices(
   { data }: { data?: TapTransactionsGetDevicesMutationRequest },
   config: Partial<RequestConfig<TapTransactionsGetDevicesMutationRequest>> & { client?: typeof fetch } = {},
-) {
+): Promise<{ ResponseCode?: number | undefined; Description?: string | null | undefined; DealNumber?: number | null | undefined; }> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const requestData = tapTransactionsGetDevicesMutationRequestSchema.parse(data)
-  const res = await request<
+  const requestData: { ApiName: string; ApiPassword: string; TerminalNumber: number; } | null = tapTransactionsGetDevicesMutationRequestSchema.parse(data)
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ProcessTransactionResponse> = await request<
     TapTransactionsGetDevicesMutationResponse,
     ResponseErrorConfig<TapTransactionsGetDevices400 | TapTransactionsGetDevices401>,
     TapTransactionsGetDevicesMutationRequest

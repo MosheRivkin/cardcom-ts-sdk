@@ -5,7 +5,7 @@ import { z } from 'zod'
 /**
  * @description Create token result, You need to save all of the information in the database next to the account, it will be used in the Token charge process
  */
-export const tokenInfoSchema = z
+export const tokenInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<TokenInfo>, "passthrough"> = z
   .object({
     Token: z.string().describe('Credit card token use it for future charges').optional(),
     TokenExDate: z.string().describe('The date that the toke will be deleted from CardCom system, yyyyMMdd').optional(),

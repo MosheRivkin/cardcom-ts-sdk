@@ -2,7 +2,7 @@ import type { TranType } from '../types/TranType.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const tranTypeSchema = z.enum([
+export const tranTypeSchema: z.ZodType<import("/home/m/dev/git/cardcom-ts-sdk/src/index").TranTypeEnum, unknown, z.core.$ZodTypeInternals<import("/home/m/dev/git/cardcom-ts-sdk/src/index").TranTypeEnum, unknown>> = z.enum([
   'Info_0',
   'Charge_1',
   'Prika_2',

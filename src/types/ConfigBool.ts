@@ -1,4 +1,4 @@
-export const configBool = {
+export const configBool: { readonly auto: "auto"; readonly true: "true"; readonly false: "false"; } = {
   auto: 'auto',
   true: 'true',
   false: 'false',

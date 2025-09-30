@@ -9,8 +9,8 @@ import type {
 import type { RequestConfig, ResponseErrorConfig } from '@kubb/plugin-client/clients/axios'
 import { companyOperationsGetCountriesQueryResponseSchema } from '../../zod/companyOperations/company-operations-get-countries-schema.ts'
 
-function getCompanyOperationsGetCountriesUrl() {
-  const res = { method: 'GET', url: `https://secure.cardcom.solutions/api/v11/CompanyOperations/GetCountries` as const }
+function getCompanyOperationsGetCountriesUrl(): { method: string; url: "https://secure.cardcom.solutions/api/v11/CompanyOperations/GetCountries"; } {
+  const res: { method: string; url: "https://secure.cardcom.solutions/api/v11/CompanyOperations/GetCountries"; } = { method: 'GET', url: `https://secure.cardcom.solutions/api/v11/CompanyOperations/GetCountries` as const }
   return res
 }
 
@@ -22,10 +22,10 @@ function getCompanyOperationsGetCountriesUrl() {
 export async function companyOperationsGetCountries(
   { params }: { params: CompanyOperationsGetCountriesQueryParams },
   config: Partial<RequestConfig> & { client?: typeof fetch } = {},
-) {
+): Promise<{ CountryCode?: string | null | undefined; Name?: string | null | undefined; NameHeb?: string | null | undefined; Alpha_2?: string | null | undefined; Alpha_3?: string | null | undefined; Iso_3166_2?: string | null | undefined; Region?: string | null | undefined; SubRegion?: string | null | undefined; IntermediateRegion?: string | null | undefined; RegionCode?: string | null | undefined; SubRegionCode?: string | null | undefined; IntermediateRegionCode?: string | null | undefined; BDI_CountryCode?: string | null | undefined; }[]> {
   const { client: request = fetch, ...requestConfig } = config
 
-  const res = await request<CompanyOperationsGetCountriesQueryResponse, ResponseErrorConfig<CompanyOperationsGetCountries401>, unknown>({
+  const res: import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-client/dist/clients/axios").ResponseConfig<import("/home/m/dev/git/cardcom-ts-sdk/src/index").CompanyOperationsGetCountries200> = await request<CompanyOperationsGetCountriesQueryResponse, ResponseErrorConfig<CompanyOperationsGetCountries401>, unknown>({
     method: 'GET',
     url: getCompanyOperationsGetCountriesUrl().url.toString(),
     params,

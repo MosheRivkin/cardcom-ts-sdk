@@ -1,4 +1,4 @@
-export const sapakStatus = {
+export const sapakStatus: { readonly UnderTest: "UnderTest"; readonly InProcess: "InProcess"; readonly Approved: "Approved"; readonly Blocked: "Blocked"; readonly Error: "Error"; } = {
   UnderTest: 'UnderTest',
   InProcess: 'InProcess',
   Approved: 'Approved',

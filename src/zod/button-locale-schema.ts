@@ -2,7 +2,7 @@ import type { ButtonLocale } from '../types/ButtonLocale.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const buttonLocaleSchema = z.enum([
+export const buttonLocaleSchema: z.ZodType<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ButtonLocaleEnum, unknown, z.core.$ZodTypeInternals<import("/home/m/dev/git/cardcom-ts-sdk/src/index").ButtonLocaleEnum, unknown>> = z.enum([
   'Arabic',
   'Bulgarian',
   'Catalan',

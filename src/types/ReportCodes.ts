@@ -1,4 +1,4 @@
-export const reportCodesEnum = {
+export const reportCodesEnum: { readonly NewCardNumber_1: 1; readonly CardCanceled_2: 2; readonly ChargeBack_3: 3; readonly DealCanceledByCardOwner_4: 4; readonly ReactivateCard_5: 5; } = {
   NewCardNumber_1: 1,
   CardCanceled_2: 2,
   ChargeBack_3: 3,

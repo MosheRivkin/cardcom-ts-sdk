@@ -6,7 +6,7 @@ import { customFieldSchema } from './custom-field-schema.ts'
 import { documentTranSchema } from './document-tran-schema.ts'
 import { z } from 'zod'
 
-export const transactionReqSchema = z.object({
+export const transactionReqSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<TransactionReq>, "passthrough"> = z.object({
   TerminalNumber: z.int().describe('Cardcom terminal number'),
   ApiName: z.string().min(1).describe('Api Name for authentication'),
   Amount: z.number().describe('Amount of transaction'),

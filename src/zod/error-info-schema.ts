@@ -5,7 +5,7 @@ import { z } from 'zod'
 /**
  * @description error information for non http status 200
  */
-export const errorInfoSchema = z
+export const errorInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<ErrorInfo>, "passthrough"> = z
   .object({
     ResponseCode: z.int().describe('if equel zero then success , else , a develper error see Description for more info ').optional(),
     Description: z.string().describe('Description of the ResponseCode').nullable().nullish(),

@@ -1,4 +1,4 @@
-export const operation = {
+export const operation: { readonly ChargeOnly: "ChargeOnly"; readonly ChargeAndCreateToken: "ChargeAndCreateToken"; readonly CreateTokenOnly: "CreateTokenOnly"; readonly SuspendedDeal: "SuspendedDeal"; readonly Do3DSAndSubmit: "Do3DSAndSubmit"; } = {
   ChargeOnly: 'ChargeOnly',
   ChargeAndCreateToken: 'ChargeAndCreateToken',
   CreateTokenOnly: 'CreateTokenOnly',

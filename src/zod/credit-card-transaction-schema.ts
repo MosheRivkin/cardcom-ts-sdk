@@ -7,7 +7,7 @@ import { mtiSchema } from './mti-schema.ts'
 import { tranTypeSchema } from './tran-type-schema.ts'
 import { z } from 'zod'
 
-export const creditCardTransactionSchema = z.object({
+export const creditCardTransactionSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CreditCardTransaction>, "passthrough"> = z.object({
   CreateDate: z.date().optional(),
   Id: z.int().optional(),
   SapakNumber: z.int().describe('The Sapak that will get the Money').nullable().nullish(),

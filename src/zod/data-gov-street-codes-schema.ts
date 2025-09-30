@@ -2,7 +2,7 @@ import type { DataGovStreetCodes } from '../types/DataGovStreetCodes.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const dataGovStreetCodesSchema = z.object({
+export const dataGovStreetCodesSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<DataGovStreetCodes>, "passthrough"> = z.object({
   Id: z.int().optional(),
   CodeStreet: z.int().nullable().nullish(),
   Street: z.string().nullable().nullish(),

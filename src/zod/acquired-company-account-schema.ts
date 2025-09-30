@@ -6,7 +6,7 @@ import { terminalInfoSchema } from './terminal-info-schema.ts'
 import { userInfoSchema } from './user-info-schema.ts'
 import { z } from 'zod'
 
-export const acquiredCompanyAccountSchema = z.object({
+export const acquiredCompanyAccountSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<AcquiredCompanyAccount>, "passthrough"> = z.object({
   SupplierUserName: z.string().min(1).describe('SupplierUserName'),
   SupplierPassword: z.string().min(1).describe('SupplierPassword'),
   Secret: z.string().min(1).describe('Secret'),

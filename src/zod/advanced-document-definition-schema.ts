@@ -6,7 +6,7 @@ import { z } from 'zod'
 /**
  * @description Advanced document definition
  */
-export const advancedDocumentDefinitionSchema = z
+export const advancedDocumentDefinitionSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<AdvancedDocumentDefinition>, "passthrough"> = z
   .object({
     get IsAutoCreateUpdateAccount() {
       return configBoolSchema

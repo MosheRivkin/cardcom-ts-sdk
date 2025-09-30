@@ -1,4 +1,4 @@
-export const expectedStoreSupplyDeliverySchedule = {
+export const expectedStoreSupplyDeliverySchedule: { readonly Immediate: "Immediate"; readonly Late: "Late"; readonly Continuous: "Continuous"; } = {
   Immediate: 'Immediate',
   Late: 'Late',
   Continuous: 'Continuous',

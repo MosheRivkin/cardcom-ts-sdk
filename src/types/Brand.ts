@@ -1,4 +1,4 @@
-export const brand = {
+export const brand: { readonly PrivateCard: "PrivateCard"; readonly MasterCard: "MasterCard"; readonly Visa: "Visa"; readonly Maestro: "Maestro"; readonly AmericanExpress: "AmericanExpress"; readonly Isracard: "Isracard"; readonly JBC: "JBC"; readonly Discover: "Discover"; readonly Diners: "Diners"; } = {
   PrivateCard: 'PrivateCard',
   MasterCard: 'MasterCard',
   Visa: 'Visa',

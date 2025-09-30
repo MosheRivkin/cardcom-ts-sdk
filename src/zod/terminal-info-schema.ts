@@ -3,7 +3,7 @@ import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { moduleTypeSchema } from './module-type-schema.ts'
 import { z } from 'zod'
 
-export const terminalInfoSchema = z.object({
+export const terminalInfoSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<TerminalInfo>, "passthrough"> = z.object({
   BankCode: z.string().describe('Bank code - get list of banks from https://secure.cardcom.solutions/api/v11/CompanyOperations/GetBanks').nullable().nullish(),
   BankBranchCode: z
     .string()

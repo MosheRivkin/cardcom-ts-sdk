@@ -6,7 +6,7 @@ import { z } from 'zod'
 /**
  * @description get account by id response
  */
-export const getAccountByIdResponseSchema = z
+export const getAccountByIdResponseSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<GetAccountByIdResponse>, "passthrough"> = z
   .object({
     ResponseCode: z.int().describe('if equel zero then success , else , a develper error see Description for more info ').optional(),
     Description: z.string().max(250).describe('Description of the ResponseCode').nullable().nullish(),

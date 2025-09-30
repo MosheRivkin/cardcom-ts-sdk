@@ -7,7 +7,7 @@ import { rciExtCustomeSchema } from './rci-ext-custome-schema.ts'
 import { rciExtDealNumSchema } from './rci-ext-deal-num-schema.ts'
 import { z } from 'zod'
 
-export const createTaxInvoiceRequestSchema = z.object({
+export const createTaxInvoiceRequestSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<CreateTaxInvoiceRequest>, "passthrough"> = z.object({
   ApiName: z.string().min(1).describe('Api Name for authentication'),
   ApiPassword: z.string().min(1).describe('Api password for authentication'),
   InvoiceType: z.int().describe('Invoice Type').optional(),

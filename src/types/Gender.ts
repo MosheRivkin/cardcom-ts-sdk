@@ -1,4 +1,4 @@
-export const gender = {
+export const gender: { readonly Unknown: "Unknown"; readonly male: "male"; readonly female: "female"; } = {
   Unknown: 'Unknown',
   male: 'male',
   female: 'female',

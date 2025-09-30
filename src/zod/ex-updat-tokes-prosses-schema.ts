@@ -2,7 +2,7 @@ import type { ExUpdatTokesProsses } from '../types/ExUpdatTokesProsses.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const exUpdatTokesProssesSchema = z.object({
+export const exUpdatTokesProssesSchema: z.ZodObject<import("/home/m/dev/git/cardcom-ts-sdk/node_modules/@kubb/plugin-zod/dist/utils/v4").ZodShape<ExUpdatTokesProsses>, "passthrough"> = z.object({
   ID: z.int().optional(),
   ExcelRow: z.int().describe('The row number of this work').optional(),
   OriginalStatus: z.string().describe('information only , original code of the acquiring').nullable().nullish(),

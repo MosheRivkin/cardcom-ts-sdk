@@ -2,7 +2,7 @@ import type { HttpStatusCode } from '../types/HttpStatusCode.ts'
 import type { ToZod } from '@kubb/plugin-zod/utils/v4'
 import { z } from 'zod'
 
-export const httpStatusCodeSchema = z.union([
+export const httpStatusCodeSchema: z.ZodType<import("/home/m/dev/git/cardcom-ts-sdk/src/index").HttpStatusCodeEnum, unknown, z.core.$ZodTypeInternals<import("/home/m/dev/git/cardcom-ts-sdk/src/index").HttpStatusCodeEnum, unknown>> = z.union([
   z.literal(100),
   z.literal(101),
   z.literal(200),
