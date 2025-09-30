@@ -22,7 +22,7 @@ To use the `cardcom-ts-sdk`, you need to import the `createCardComClient` functi
 ```typescript
 import { createCardComClient } from 'cardcom-ts-sdk';
 
-const cardcom = createCardComClient({
+const cardcom = createCardcomClient({
   apiName: 'YOUR_API_NAME',
   terminalNumber: '1234',
 });
